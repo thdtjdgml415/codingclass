@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'HBIOS-SYS';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'HBIOS-SYS';
+  cursor: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  background: rgb(151, 48, 48);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+#header h1 {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px 0;
+}
+
+#header .time {
+  color: #fff;
+}
+
+/* icon */
+.icon1 {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 54px;
+}
+
+.icon1 img {
+  width: 54px;
+}
+
+.icon1 span {
+  display: block;
+  background: rgb(151, 48, 48);
+  color: #fff;
+  font-size: 14px;
+  padding: 2px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.icon2 {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  width: 54px;
+}
+
+.icon2 img {
+  width: 54px;
+}
+
+.icon2 span {
+  display: block;
+  background: rgb(151, 48, 48);
+  color: #fff;
+  font-size: 14px;
+  padding: 2px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.icon3 {
+  position: absolute;
+  left: 100px;
+  top: 300px;
+  width: 54px;
+}
+
+.icon3 img {
+  width: 54px;
+}
+
+.icon3 span {
+  display: block;
+  background: rgb(151, 48, 48);
+  color: #fff;
+  font-size: 14px;
+  padding: 2px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.icon4 {
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  width: 54px;
+}
+
+.icon4 img {
+  width: 54px;
+}
+
+.icon4 span {
+  display: block;
+  background: rgb(151, 48, 48);
+  color: #fff;
+  font-size: 14px;
+  padding: 2px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* mouse */
+.mouse__cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/cursorcluster04.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+
+}
+/* musicList */
+.music__list {
+  display: none;
+}
+.music__list.show {
+  display: block;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background: rgb(151, 48, 48);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+#footer .agent {}
+
+.mac #footer {}
+
+.window #footer {}
