@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../assets/css/modal.css" />
     <link rel="stylesheet" href="../../assets/css/gamesearch.css" />
     <link rel="stylesheet" href="../../assets/css/memory.css" />
+    <link rel="stylesheet" href="../../assets/css/Frankenstein.css" />
   </head>
 
   <body>
@@ -948,6 +949,18 @@
       <!-- Memory -->
       <div class="memory__wrap">
         <div class="memory__inner">
+          <div class="memory_timer">
+            <div class="timer">0:00</div>
+          </div>
+          <div class="memory__cover show">
+            <div class="memory__startbtn">
+              <p class="memory__info">카드 짝 맞추기 게임을 시작하겠습니다.</p>
+              <button>시작하기</button>
+            </div>
+          </div>
+          <div class="memory__header">
+            <img src="../../assets/img/closebtn.jpg" alt="닫기" />
+          </div>
           <div class="memory__card">
             <ul class="cards">
               <li>
@@ -1082,6 +1095,53 @@
             <!-- memory_card -->
           </div>
         </div>
+        <!--Frankenstein-->
+        <div class="frank__wrap">
+          <div class="main flex">
+            <div class="frank">
+              <div class="head flex">
+                <div class="head__t"></div>
+                <div class="head__m">
+                  <div class="face">
+                    <div class="eye flex">
+                      <div class="eye__l"></div>
+                      <div class="eye__r"></div>
+                    </div>
+                    <div class="nose flex">
+                      <div class="nose__t"></div>
+                      <div class="nose__b"></div>
+                    </div>
+                    <div class="mouth"></div>
+                    <div class="teeth">
+                      <div class="teeth__l"></div>
+                      <div class="teeth__m"></div>
+                      <div class="teeth__r"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="head__b"></div>
+              </div>
+              <div class="hair flex">
+                <div class="hair__t"></div>
+                <div class="hair__m black"></div>
+                <div class="hair__b black"></div>
+              </div>
+              <div class="ear flex">
+                <div class="ear__l"></div>
+                <div class="ear__r"></div>
+              </div>
+              <div class="screws">
+                <div class="screws__l"></div>
+                <div class="screws__r"></div>
+              </div>
+            </div>
+          </div>
+          <div class="result__inner">
+            <div class="result"></div>
+            <button class="restart">다시 도전해보세요</button>
+          </div>
+        </div>
+        <!--/Frankenstein-->
       </div>
       <!-- /Memory -->
     </div>
@@ -1137,8 +1197,8 @@
         //커서
         gsap.to(".mouse__cursor", {
           duration: 0,
-          left: mousePageX - 25,
-          top: mousePageY - 25,
+          left: mousePageX,
+          top: mousePageY,
         });
       };
       window.addEventListener("mousemove", mouseMove);
