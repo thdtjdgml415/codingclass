@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] 음양 더하기</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">음향 더하기</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          어떤 정수들이 있습니다. 이 정수들의 절댓값을 차례대로 담은 정수 배열
+          <br />
+          absolutes와 이 정수들의 부호를 차례대로 담은 불리언 배열 signs가
+          <br />
+          매개변수로 주어집니다. 실제 정수들의 합을 구하여 return 하도록
+          solution
+          <br />
+          함수를 완성해주세요.
+        </p>
+        <hr />
+
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>absolutes</th>
+              <th>signs</th>
+              <th>result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">[4,7,12]</td>
+              <td>[true,false,true]</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td class="ce">[1,2,3]</td>
+              <td>[true,false,true]]</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <h3 class="t_tit">풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(absolutes, signs) {
+      let k = 0;
+          absolutes.forEach((i, el) => {
+              if(signs[el] === true) {
+                  k += absolutes[el];
+              } else {
+                  k -= absolutes[el];
+              } 
+          })
+          return k
+      }
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc3">
+            이번 문제는 forEach문을 사용하여 absolutes에서 받아오는 배열의
+            요소를 파악하고 <br />
+            signs로 받아오는 배열에서 absolutes와 같은 위치에 있는 불린값에 따라
+            더하고 빼고를 반복합니다. <br />
+            forEach문을 사용하여 absolutes에 요소의 index 값을 signs[el]로
+            받아와서 처리했습니다.
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
