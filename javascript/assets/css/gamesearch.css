@@ -25,6 +25,7 @@
   display: inline-block;
   color: #fff;
 }
+
 .search__wrap .closeGame {
   background-image: url(../img/musicbutton.svg);
   position: absolute;
@@ -52,7 +53,7 @@
   color: #f40dcd;
 }
 
-.search__wrap .timer {
+.search__wrap .timers {
   width: 140px;
   height: 140px;
   line-height: 140px;
@@ -63,7 +64,7 @@
   font-size: 34px;
 }
 
-.search__wrap .timer span {
+.search__wrap .timers span {
   color: #000;
   font-size: 34px;
   font-weight: 100;
@@ -111,7 +112,7 @@
   display: none;
 }
 
-.search__list.show{
+.search__list.show {
   display: block;
 }
 
@@ -177,13 +178,16 @@
 
 .search__info .num {
   color: yellow;
-} 
+}
+
 .search__info .now {
   color: yellow;
-} 
+}
+
 .search__info i {
   color: yellowgreen;
 }
+
 .search__info .hint {
   color: yellowgreen;
 }

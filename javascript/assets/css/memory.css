@@ -192,6 +192,7 @@
     width: 100px;
     border-radius: 50px;
     background: rgb(255, 196, 0);
+    height: 50px;
 }
 
 .memory__cover .memory__startbtn button:hover {
