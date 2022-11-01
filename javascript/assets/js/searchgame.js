@@ -1799,7 +1799,6 @@ function reduceTime() {
 
   searchTime.innerHTML = displayTime();
 }
-
 //시간 체크
 function displayTime() {
   if (timeReamining <= 0) {
@@ -1867,6 +1866,7 @@ searchHint.addEventListener("click", () => {
 //아이콘 클릭시 등장
 document.querySelector(".icon2").addEventListener("click", () => {
   searchWrap.classList.toggle("show");
+  music.stop();
 });
 
 //게임 끄기
@@ -1874,4 +1874,7 @@ const closeBtn = document.querySelector(".closeGame");
 
 closeBtn.addEventListener("click", () => {
   searchWrap.classList.remove("show");
+  clearInterval(timeInterval);
+  music.stop();
+  searchStart.style.display = "block";
 });

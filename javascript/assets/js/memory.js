@@ -108,6 +108,9 @@ function matchCards(img1, img2) {
 function shuffleCard() {
   cardOne = cardTwo = "";
   disableDeck = false;
+  setTimeout(() => {
+    disableDeck = false;
+  }, 4000);
 
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
   let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
@@ -152,7 +155,7 @@ document.querySelector(".memory__header img").addEventListener("click", () => {
 //게임 끝나면
 function EndGame() {
   document.querySelector(".memory__wrap .frank__wrap").classList.add("show");
-  const ResultGame = document.querySelector(".memory__wrap .result");
+  const ResultGame = document.querySelector(".memory__wrap .result__memory");
   if (timeUp < 30) {
     clearInterval(memoryInterval);
     ResultGame.innerHTML = `당신의 시간은 ${timeUp}초 상위 20% 입니다.`;

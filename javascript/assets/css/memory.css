@@ -175,6 +175,7 @@
     z-index: 10;
     border-radius: 30px;
     display: none;
+    border-radius: 50%;
 }
 
 .memory__cover.show {

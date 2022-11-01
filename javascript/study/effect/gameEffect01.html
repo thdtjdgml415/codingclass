@@ -1138,7 +1138,7 @@
             </div>
           </div>
           <div class="result__inner">
-            <div class="result"></div>
+            <div class="result__memory"></div>
             <button class="restart">다시 도전해보세요</button>
           </div>
         </div>
@@ -3851,6 +3851,33 @@ function restart() {
       document.querySelectorAll(".game__box > div").forEach((e) => {
         e.addEventListener("click", (el) => {});
       });
+    </script>
+    <script>
+      //z-index 변화
+      const BoxList = document.querySelectorAll(".game__box > div");
+      BoxList.forEach((el, index) => {
+        el.style.zIndex = index;
+        el.addEventListener("click", function () {
+          let maxNum = Math.max(...zIndexArray);
+          let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
+          console.log(index);
+          console.log(maxNum, maxIndex);
+          zIndexArray = zIndexArray.map((arr) => {
+            if (arr > zIndexArray[index]) {
+              return arr - 1;
+            } else {
+              return arr;
+            }
+          });
+          zIndexArray[index] = maxNum;
+
+          array.forEach((el, index) => {
+            el.style.zIndex = zIndexArray[index];
+          });
+        });
+      });
+      let array = [...BoxList];
+      let zIndexArray = array.map((arr) => Number(arr.style.zIndex));
     </script>
   </body>
 </html>
