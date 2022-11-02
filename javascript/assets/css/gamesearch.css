@@ -298,6 +298,7 @@
 .search__audio {
   cursor: pointer;
   margin-bottom: 10px;
+  display: inline-block;
 }
 
 .search__audio .stop {

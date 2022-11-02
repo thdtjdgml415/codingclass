@@ -1799,6 +1799,7 @@ function reduceTime() {
 
   searchTime.innerHTML = displayTime();
 }
+
 //시간 체크
 function displayTime() {
   if (timeReamining <= 0) {
@@ -1836,6 +1837,7 @@ function restart() {
     timeReamining = 120;
     score = 0;
     correctList.innerHTML = "0";
+    clearInterval(timeInterval);
     startQuiz();
   }, 1000);
 }
@@ -1848,12 +1850,12 @@ searchRestart.addEventListener("click", restart);
 //음악 클릭
 musicPlayBtn.addEventListener("click", () => {
   music.play();
-  musicStopBtn.style.display = "block";
+  musicStopBtn.style.display = "inline-block";
   musicPlayBtn.style.display = "none";
 });
 musicStopBtn.addEventListener("click", () => {
   music.pause();
-  musicPlayBtn.style.display = "block";
+  musicPlayBtn.style.display = "inline-block";
   musicStopBtn.style.display = "none";
 });
 
@@ -1874,7 +1876,12 @@ const closeBtn = document.querySelector(".closeGame");
 
 closeBtn.addEventListener("click", () => {
   searchWrap.classList.remove("show");
+  music.pause();
   clearInterval(timeInterval);
-  music.stop();
   searchStart.style.display = "block";
+  timeReamining = 120;
+  score = 0;
+  correctList.innerHTML = "0";
+  searchInput.value = "";
+  console.log(searchTime);
 });

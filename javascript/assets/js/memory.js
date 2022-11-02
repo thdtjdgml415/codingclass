@@ -5,7 +5,7 @@
 const memoryWrap = document.querySelector(".memory__wrap");
 const memoryCards = memoryWrap.querySelectorAll(".cards li");
 const memoryTime = document.querySelector(".memory_timer .timer"); //타이머
-const memoryStart = document.querySelector(".memory__startbtn button"); //게임 시작버튼
+const memoryStart = document.querySelector(".memory__startbtn .memorystart"); //게임 시작버튼
 const memoryCover = document.querySelector(".memory__cover"); //게임 커버
 
 //카드 뒤집기
@@ -14,11 +14,12 @@ let disableDeck = false;
 let matchedCard = 0; //맞춘 카드
 let timeUp = 0; //시간
 let timeInterval = "";
+let memoryInterval = 0;
 
 let sound = [
-  "../../assets/audio/correct.mp3",
-  "../../assets/audio/error.mp3",
-  "../../assets/audio/Success.mp3",
+  "https://thdtjdgml415.github.io/codingclass/javascript/assets/audio/correct.mp3",
+  "https://thdtjdgml415.github.io/codingclass/javascript/assets/audio/error.mp3",
+  "https://github.com/thdtjdgml415/codingclass/blob/main/javascript/assets/audio/Success%201.m4a",
 ];
 let soundMatch = new Audio(sound[0]);
 let soundUnMatch = new Audio(sound[1]);
@@ -31,26 +32,26 @@ memoryStart.addEventListener("click", () => {
 // 게임 시작하기
 function startMemory() {
   memoryCover.classList.remove("show");
-  memoryInterval = setInterval(countTime, 1000);
+  memoryInterval = setInterval(countMemoryTime, 1000);
   shuffleCard();
 }
 
 //시간 출력하기
-countTime = () => {
+function countMemoryTime() {
   timeUp++;
   if (matchedCard === 8) EndGame();
-  memoryTime.innerHTML = displayTime();
-};
+  memoryTime.innerHTML = displaymMmoryTime();
+}
 
 //시간 체크하기
-displayTime = () => {
+function displaymMmoryTime() {
   let minutes = Math.floor(timeUp / 60);
   let seconds = timeUp % 60;
 
   //초가 한자리 수 일때 0을 추가
   if (seconds < 10) seconds = "0" + seconds;
   return minutes + ":" + seconds;
-};
+}
 
 function flipCard(e) {
   let clickedCard = e.target;
@@ -108,9 +109,6 @@ function matchCards(img1, img2) {
 function shuffleCard() {
   cardOne = cardTwo = "";
   disableDeck = false;
-  setTimeout(() => {
-    disableDeck = false;
-  }, 4000);
 
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
   let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));

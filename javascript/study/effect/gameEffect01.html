@@ -40,7 +40,7 @@
       <span>folder</span>
     </div>
     <div class="mouse__cursor">
-      <img src="../../assets/img/cursor.cluster.png" alt="" />
+      <img src="../../assets/img/cursorcluster.png" alt="" />
     </div>
     <!-- main -->
     <footer id="footer">
@@ -58,7 +58,7 @@
           <div class="music__contents">
             <div class="music__view">
               <div class="img">
-                <img src="../../assets/img/musicbg01.png" alt="song" />
+                <img src="" alt="song" />
               </div>
               <div class="title">
                 <h3>Fluffing a Duck</h3>
@@ -70,7 +70,7 @@
                 <div class="bar">
                   <audio
                     id="main-audio"
-                    src="../assets/audio/Music_audio01.mp3"
+                    src="https://thdtjdgml415.github.io/codingclass/javascript/assets/audio/Music_audio01.mp3"
                   ></audio>
                 </div>
                 <div class="timer">
@@ -156,7 +156,7 @@
           </span>
           <audio
             id="audio"
-            src="../../assets/audio/Virtual Roaming Charges - half.cool.mp3"
+            src="https://thdtjdgml415.github.io/codingclass/javascript/assets/audio/Music_audio01.mp3"
             loop="loop"
           ></audio>
         </div>
@@ -3737,42 +3737,42 @@ function restart() {
         //커서
         gsap.to(".mouse__cursor", {
           duration: 0,
-          left: mousePageX,
-          top: mousePageY,
+          left: mousePageX - 25,
+          top: mousePageY - 25,
         });
       };
       window.addEventListener("mousemove", mouseMove);
       $(".icon1").draggable({
-        drag: function () {
-          $(".mouse__cursor img").attr(
-            "src",
-            "../../assets/img/cursorcluster04.png"
-          );
-        },
+        // drag: function () {
+        //   $(".mouse__cursor img").attr(
+        //     "src",
+        //     "../../assets/img/cursorcluster04.png"
+        //   );
+        // },
       });
       $(".icon2").draggable({
-        drag: function () {
-          $(".mouse__cursor img").attr(
-            "src",
-            "../../assets/img/cursorcluster01.png"
-          );
-        },
+        // drag: function () {
+        //   $(".mouse__cursor img").attr(
+        //     "src",
+        //     "../../assets/img/cursorcluster01.png"
+        //   );
+        // },
       });
       $(".icon3").draggable({
-        drag: function () {
-          $(".mouse__cursor img").attr(
-            "src",
-            "../../assets/img/cursorcluster02.png"
-          );
-        },
+        // drag: function () {
+        //   $(".mouse__cursor img").attr(
+        //     "src",
+        //     "../../assets/img/cursorcluster02.png"
+        //   );
+        // },
       });
       $(".icon4").draggable({
-        drag: function () {
-          $(".mouse__cursor img").attr(
-            "src",
-            "../../assets/img/cursorcluster.png"
-          );
-        },
+        // drag: function () {
+        //   $(".mouse__cursor img").attr(
+        //     "src",
+        //     "../../assets/img/cursorcluster.png"
+        //   );
+        // },
       });
       $(".music__wrap").draggable();
       $(".search__wrap").draggable();
@@ -3860,8 +3860,8 @@ function restart() {
         el.addEventListener("click", function () {
           let maxNum = Math.max(...zIndexArray);
           let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
-          console.log(index);
-          console.log(maxNum, maxIndex);
+          // console.log(index);
+          // console.log(maxNum, maxIndex);
           zIndexArray = zIndexArray.map((arr) => {
             if (arr > zIndexArray[index]) {
               return arr - 1;
