@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple</title>
+    <link
+      href="https://webfontworld.github.io/Montserrat/Montserrat.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat";
+        font-weight: 100;
+      }
+      .fixed {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .scrollTop {
+        position: fixed;
+        left: 10px;
+        top: 100px;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        z-index: 100000;
+        background: rgba(255, 255, 255, 0.3);
+        font-size: 5vw;
+      }
+      /* layout */
+      #contents {
+      }
+      #section1 {
+        height: 10000px;
+      }
+      #section2 {
+      }
+      #section3 {
+      }
+      #section4 {
+      }
+      #section5 {
+      }
+      #section6 {
+      }
+      /* sec1 */
+      .sec1_text1 {
+        font-size: 8vw;
+        white-space: nowrap;
+      }
+      .sec1_text2 {
+        font-size: 10vw;
+        white-space: nowrap;
+        font-weight: 700;
+      }
+      .sec1_text2 .sec1_text2_p2 {
+        font-weight: 500;
+        margin-left: 300px;
+      }
+      .sec1_text3 {
+        width: 100%;
+        height: 100vh;
+        background: url("https://images.unsplash.com/photo-1652028506778-002ebfd287f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      .sec1_text4 {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        line-height: 50vw;
+        font-size: 10vw;
+      }
+      .sec1_text5 {
+        width: 50vw;
+        height: 20vw;
+        border-radius: 50%;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        align-items: center;
+        font-size: 3vw;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .sec1_text5 span {
+        color: rgb(253, 233, 52);
+        font-weight: 500;
+      }
+      .sec1_text5 em {
+        font-style: normal;
+        text-align: center;
+      }
+      .sec1_text6 {
+        color: #fff;
+        display: flex;
+        font-size: 5vw;
+      }
+      .sec1_text7 {
+        width: 20vw;
+        height: 20vw;
+        color: #fff;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: 30px;
+        background: url("/javascript/assets/img/rocket-svgrepo-com.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .sec1_text7 .sec1_text7_p7 {
+        color: rgb(255, 77, 0);
+        font-weight: 700;
+      }
+      .sec1_text8 {
+        width: 100%;
+        height: 100vh;
+        background: url("https://images.unsplash.com/photo-1543717884-99838aec2ef9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1273&q=80");
+        background-size: cover;
+        background-position: center;
+      }
+      .sec1_text9 {
+        width: 10vw;
+        height: 10vw;
+        color: #fff;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: 30px;
+        background: url("/javascript/assets/img/rocket-svgrepo-com.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scrollTop"></div>
+    <div class="contents">
+      <section id="section1">
+        <div class="sec1">
+          <div
+            class="sec1_text1 fixed"
+            data-0="top: 50%; opacity: 1"
+            data-1000="top:30%; opacity: 0"
+          >
+            안녕하세요!
+          </div>
+          <div
+            class="sec1_text2 fixed"
+            data-1000="opacity: 0; top: 50%; transform: translate(-50%, -50%) scale:(1)"
+            data-1500="opacity:1; left: 70%; transform: translate(-50%, -50%) scale:(1.4)"
+            data-2000="opacity:1; left: 30%; transform: translate(-50%, -50%) scale:(0)"
+          >
+            <img
+              src="https://github.com/thdtjdgml415/codingclass/blob/main/assets/ico/favicon-128.png?raw=true"
+              alt="사진"
+            />
+            <span> FRONT-END DEVELOPER</span>
+            <p class="sec1_text2_p2">Portfolio</p>
+          </div>
+          <div
+            class="sec1_text3 fixed"
+            data-2500="width: 0%; transform: translate(-50%, -50%) rotate(-360deg) scale(1)"
+            data-3500="width: 100%; transform: translate(-50%, -50%) rotate(0deg) scale(1.5)"
+            data-4500="width: 100%; transform: translate(-50%, -50%) rotate(0deg) scale(2)"
+          ></div>
+          <div
+            class="sec1_text4 fixed"
+            data-4500="width: 50vw; opacity:0; transform: translate(-50%, -50%) scale(1) rotate(-360deg)"
+            data-5000="width: 50vw; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+            data-5500="width: 50vw; opacity:0; transform: translate(-50%, -50%) scale(0) rotate(0deg)"
+          >
+            HELLO
+          </div>
+          <div
+            class="sec1_text5 fixed"
+            data-5500="width: 50vw; opacity:0; transform: translate(-50%, -50%) scale(1)"
+            data-6500="width: 50vw; opacity:1; transform: translate(-50%, -50%) scale(1.5)"
+            data-7500="width: 50vw; opacity:0; transform: translate(-50%, -50%) scale(0)"
+          >
+            <span
+              >진정으로 웃으려면 고통을 참아야하며 , 나아가 고통을 즐길 줄
+              알아야 해</span
+            >
+            <em>찰리 채플린</em>
+          </div>
+          <div class="sec1_text6 fixed">
+            <div
+              class="sec1_text6_p1 fixed"
+              data-7500="left:-20%; opacity:0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-7600="left:50%; opacity:1; transform: translate(-250%, -50%) rotate(0deg)"
+            >
+              개
+            </div>
+            <div
+              class="sec1_text6_p2 fixed"
+              data-7600="left:-20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-7700="left:50%; opacity: 1; transform: translate(-150%, -50%) rotate(0deg)"
+            >
+              발
+            </div>
+            <div
+              class="sec1_text6_p3 fixed"
+              data-7700="left:-20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-7800="left:50%; opacity: 1; transform: translate(-50%, -50%) rotate(0deg)"
+            >
+              자
+            </div>
+            <div
+              class="sec1_text6_p4 fixed"
+              data-7800="left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-7900="left:50%; opacity: 1; transform: translate(-150%, 50%) rotate(0deg)"
+            ></div>
+            <div
+              class="sec1_text6_p5 fixed"
+              data-7900="left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8000="left:50%; opacity: 1; transform: translate(-250%, 50%) rotate(0deg)"
+            >
+              이
+            </div>
+            <div
+              class="sec1_text6_p6 fixed"
+              data-8000="left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8100="left:50%; opacity: 1; transform: translate(-150%, 50%) rotate(0deg)"
+            >
+              야
+            </div>
+            <div
+              class="sec1_text6_p7 fixed"
+              data-8100="left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8200="left:50%; opacity: 1; transform: translate(-50%, 50%) rotate(0deg)"
+            >
+              기
+            </div>
+            <div
+              class="sec1_text6_p8 fixed"
+              data-8200="left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8300="left:50%; opacity: 1; transform: translate(50%, 50%) rotate(0deg)"
+            >
+              를
+            </div>
+            <div
+              class="sec1_text6_p9 fixed"
+              data-8300="left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8400="left:50%; opacity: 1; transform: translate(-50%, 150%) rotate(0deg)"
+            ></div>
+            <div
+              class="sec1_text6_p10 fixed"
+              data-8400=" left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8500="left:50%; opacity: 1; transform: translate(-50%, 150%) rotate(0deg)"
+            >
+              시
+            </div>
+            <div
+              class="sec1_text6_p11 fixed"
+              data-8500=" left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8600="left:50%; opacity: 1; transform: translate(50%, 150%) rotate(0deg)"
+            >
+              작
+            </div>
+            <div
+              class="sec1_text6_p12 fixed"
+              data-8600=" left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8700="left:50%; opacity: 1; transform: translate(150%, 150%) rotate(0deg)"
+            >
+              합
+            </div>
+            <div
+              class="sec1_text6_p13 fixed"
+              data-8700=" left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8800="left:50%; opacity: 1; transform: translate(250%, 150%) rotate(0deg)"
+            >
+              니
+            </div>
+            <div
+              class="sec1_text6_p14 fixed"
+              data-8800=" left: -20%; opacity: 0; transform: translate(-50%, -50%) rotate(45deg)"
+              data-8900="left:50%; opacity: 1; transform: translate(350%, 150%) rotate(0deg)"
+            >
+              다
+            </div>
+          </div>
+          <div
+            class="sec1_text7 fixed"
+            data-9000=" left: -20%; opacity:1; transform: translate(-50%, -50%) scale(1) rotate(45deg)"
+            data-9500=" left: 0%; opacity:1;transform: translate(-50%, -50%) scale(1) rotate(45deg)"
+            data-10000=" left: 50%; opacity:1;transform: translate(-50%, -50%) scale(0) rotate(90deg)"
+          >
+            <p class="sec1_text7_p7">탐험을 좋아해요</p>
+          </div>
+          <div
+            class="sec1_text8 fixed"
+            data-10500="width: 0%; opacity:1; scale(1)"
+            data-11000="width: 50%; opacity:1; scale(1)"
+            data-11500="width: 100%; opacity:1; scale(1.4)"
+            data-12000="width: 100%; opacity:1; scale(1)"
+          ></div>
+          <div
+            class="sec1_text9 fixed"
+            data-12000="left: -20%; transform: translate(-20%, -30%) scale(1) rotate(40deg)"
+            data-12500="left: 0%; transform: translate(-30%,-20%) scale(0.5) rotate(45deg)"
+            data-13000="left: 50%; transform: translate(30%, 20%) scale(0) rotate(10deg)"
+          ></div>
+        </div>
+      </section>
+      <!--//section1-->
+
+      <section id="section2"></section>
+      <!--//section2-->
+      <section id="section3"></section>
+      <!--//section3-->
+      <section id="section4"></section>
+      <!--//section4-->
+      <section id="section5"></section>
+      <!--//section5-->
+      <section id="section6"></section>
+      <!--//section6-->
+    </div>
+    <!-- contents -->
+
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+      const s = skrollr.init();
+
+      function scroll() {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+
+        requestAnimationFrame(scroll); //1분에 60번씩만 실행해주는 메서드 메모리를 아낄 수 있다.
+      }
+      scroll();
+    </script>
+  </body>
+</html>
