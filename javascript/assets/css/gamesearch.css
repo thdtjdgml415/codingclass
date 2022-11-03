@@ -301,9 +301,10 @@
   display: inline-block;
 }
 
-.search__audio .stop {
+.search__audio .play {
   display: none;
 }
+
 
 @keyframes rubberBand {
   from {

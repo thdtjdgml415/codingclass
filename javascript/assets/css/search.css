@@ -3,6 +3,7 @@
   --cssColor: #472222;
   --javascriptColor: #224736;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -10,30 +11,37 @@
   font-family: "NexonLv1Gothic";
   color: var(--htmlColor);
 }
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 a {
   color: var(--htmlColor);
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }
+
 /* header */
 #header {
   display: flex;
   justify-content: space-between;
 }
+
 #header nav {
   margin: 10px;
 }
+
 #header nav li {
   position: relative;
   display: inline;
 }
+
 #header nav li a {
   width: 30px;
   height: 30px;
@@ -44,16 +52,19 @@ li {
   line-height: 30px;
   font-family: "NexonLv1Gothic";
 }
+
 #header nav li.active a {
   background-color: var(--htmlColor);
   color: #fff;
 }
+
 #header nav li .sub {
   position: absolute;
   left: 0;
   top: 35px;
   width: 400px;
 }
+
 #header nav li .sub li a {
   width: auto;
   background-color: transparent;
@@ -62,13 +73,16 @@ li {
   text-align: left;
   line-height: 1.2;
 }
+
 #header nav li .sub li.active a {
   text-decoration: underline;
 }
+
 /* main */
 #main {
   margin: 50px 10px;
 }
+
 .search__wrap {
   max-width: 1400px;
   margin: 0 auto;
@@ -78,21 +92,25 @@ li {
   padding: 30px;
   text-align: center;
 }
-.search__wrap > span {
+
+.search__wrap>span {
   font-size: 20px;
   margin-bottom: 20px;
   display: inline-block;
 }
-.search__wrap > h1 a {
+
+.search__wrap>h1 a {
   font-family: "Tmon";
   color: var(--htmlColor);
   font-size: 5vw;
   margin-bottom: 10px;
 }
+
 .search__wrap .desc {
   line-height: 1.4;
   padding: 20px 0;
 }
+
 .search__wrap .time {
   width: 140px;
   height: 140px;
@@ -102,15 +120,18 @@ li {
   margin: 0 auto;
   background: var(--htmlColor);
 }
+
 .search__wrap .time span {
   color: #fff;
   font-size: 34px;
   font-weight: 100;
 }
+
 .search__box {
   margin-bottom: 20px;
   position: relative;
 }
+
 .search__box label {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -119,6 +140,7 @@ li {
   margin: -1px;
   overflow: hidden;
 }
+
 .search__box input {
   border: 2px solid var(--htmlColor);
   padding: 15px 40px;
@@ -127,6 +149,7 @@ li {
   font-size: 20px;
   margin-top: 20px;
 }
+
 .search__box .start {
   position: absolute;
   left: 50%;
@@ -141,16 +164,20 @@ li {
   color: #fff;
   cursor: pointer;
 }
+
 .search__list li {
   text-align: left;
   line-height: 1.7;
 }
+
 .search__list li.show {
   display: block;
 }
+
 .search__list li.hide {
   display: none;
 }
+
 .search__list span {
   display: inline-block;
   padding: 10px 20px;
@@ -160,41 +187,50 @@ li {
   transition: all 0.3s;
   cursor: pointer;
 }
+
 .search__list span:hover {
   background-color: var(--htmlColor);
   color: #fff;
 }
+
 .search__list em {
   float: right;
   font-style: normal;
 }
+
 .search__list .line {
   margin: 50px 0;
 }
+
 .search__list .line li {
   background: #e3eaf5;
   padding: 10px 30px;
   margin-bottom: 5px;
   border-radius: 50px;
 }
+
 .search__list .line li:hover {
   background: #d3e2fa;
   cursor: pointer;
 }
+
 .search__info {
   text-align: right;
   margin-bottom: 30px;
   padding-bottom: 10px;
   border-bottom: 2px dashed var(--htmlColor);
 }
+
 .search__info .type {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .search__info .keyword {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .search__info .keyword span {
   border: 2px solid var(--htmlColor);
   border-radius: 50px;
@@ -202,11 +238,13 @@ li {
   display: inline-block;
   margin-bottom: 4px;
 }
+
 .search__info .keyword span:hover {
   background-color: var(--htmlColor);
   color: #fff;
   cursor: pointer;
 }
+
 .search__info.center {
   text-align: center;
   display: flex;
@@ -215,6 +253,7 @@ li {
   gap: 10px;
   padding-bottom: 40px;
 }
+
 .search__desc {
   padding: 20px 40px 20px 60px;
   margin-bottom: 50px;
@@ -226,13 +265,16 @@ li {
   background-repeat: no-repeat;
   background-position: 22px 17px;
 }
+
 .search__click {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
 .search__click li {
   display: inline;
 }
+
 .search__click li a {
   display: inline-block;
   border: 1px solid var(--htmlColor);
@@ -240,10 +282,12 @@ li {
   padding: 10px 20px;
   margin: 5px 0;
 }
+
 .search__click li a:hover {
   background-color: var(--htmlColor);
   color: #fff;
 }
+
 .search__result {
   position: fixed;
   right: 3vw;
@@ -258,15 +302,18 @@ li {
   border-radius: 50%;
   border: 6px solid #22ff00;
 }
+
 .search__result.show {
   display: flex;
   animation: rubberBand 1s 0.6s ease-in;
 }
+
 .search__result .result {
   font-size: 1.4vw;
   margin-top: 30px;
   line-height: 1.5;
 }
+
 .search__result .restart {
   background: #22ff00;
   color: #fff;
@@ -281,7 +328,8 @@ li {
   cursor: pointer;
   margin-bottom: 10px;
 }
-.search__audio .play {
+
+.search__audio .stop {
   display: none;
 }
 
@@ -319,35 +367,43 @@ li {
   .search__wrap {
     padding: 20px;
   }
-  .search__wrap > span {
+
+  .search__wrap>span {
     font-size: 16px;
     margin-bottom: 10px;
   }
-  .search__wrap > h1 {
+
+  .search__wrap>h1 {
     font-size: 44px;
   }
+
   .search__box input {
     font-size: 16px;
     padding: 12px 30px;
   }
 }
+
 /* footer */
 #footer {
   text-align: center;
 }
+
 #footer a {
   color: #000;
   font-family: "NexonLv1Gothic";
   padding-bottom: 50px;
 }
+
 #footer a:hover {
   text-decoration: underline;
 }
+
 .search__answers {
   border-bottom: 2px dashed var(--htmlColor);
   padding-bottom: 40px;
   display: none;
 }
+
 .search__answers span {
   display: inline-block;
   background: var(--htmlColor);
@@ -356,11 +412,13 @@ li {
   border-radius: 30px;
   margin: 3px;
 }
+
 .search__missAnswers {
   border-bottom: 2px dashed var(--htmlColor);
   padding: 40px 0;
   display: none;
 }
+
 .search__missAnswers span {
   display: inline-block;
   border: 1px solid var(--htmlColor);
@@ -370,8 +428,8 @@ li {
 }
 
 /* modal__wrap */
-.modal__wrap {
-}
+.modal__wrap {}
+
 .modal__cont {
   width: 100%;
   height: 100vh;
@@ -385,6 +443,7 @@ li {
   justify-content: center;
   transform: scale(0);
 }
+
 .modal__btn {
   color: #000;
   border: 1px solid rgb(177, 12, 12);
@@ -397,10 +456,12 @@ li {
   cursor: pointer;
   transition: all 0.3s;
 }
+
 .modal__btn:hover {
   background-color: rgb(0, 255, 42);
   color: #3b3d63;
 }
+
 .modal__box {
   width: 70%;
   height: 70vh;
@@ -411,6 +472,7 @@ li {
   box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
   transform: scale(0);
 }
+
 .modal__box .title {
   padding-inline: 1rem;
   background-color: #000007;
@@ -421,6 +483,7 @@ li {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+
 .modal__box .title .dot {
   width: 15px;
   height: 15px;
@@ -430,6 +493,7 @@ li {
   position: relative;
   margin-left: 2rem;
 }
+
 .modal__box .title .dot::before {
   content: "";
   position: absolute;
@@ -440,6 +504,7 @@ li {
   background-color: #22ff00;
   border-radius: 50%;
 }
+
 .modal__box .title .dot::after {
   content: "";
   position: absolute;
@@ -450,17 +515,20 @@ li {
   background-color: rgb(255, 0, 0);
   border-radius: 50%;
 }
+
 .modal__box .title .plus {
   background: #282936;
   padding: 0.5rem 0.5rem 0.3rem 0.5rem;
   border-radius: 0.5rem;
   color: #7a7d9d;
 }
+
 .modal__box .title .tabs {
   display: flex;
   margin-left: 50px;
 }
-.modal__box .title .tabs > div {
+
+.modal__box .title .tabs>div {
   color: #7a7d9d;
   background-color: #1f224a;
   padding: 0.35rem 0.8rem 0.25rem 0.8rem;
@@ -471,19 +539,24 @@ li {
   text-transform: uppercase;
   cursor: grab;
 }
-.modal__box .title .tabs > div.active {
+
+.modal__box .title .tabs>div.active {
   background-color: #fff;
 }
-.modal__box .title .tabs > div em {
+
+.modal__box .title .tabs>div em {
   font-style: normal;
 }
-.modal__box .title .tabs > div .favicon {
+
+.modal__box .title .tabs>div .favicon {
   margin-right: 0.4rem;
   margin-top: 0.2rem;
 }
-.modal__box .title .tabs > div .close {
+
+.modal__box .title .tabs>div .close {
   margin-left: 4rem;
 }
+
 .title .plus {
   border: 1px solid #000;
   padding: 0.4rem;
@@ -491,6 +564,7 @@ li {
   background-color: #1f224a;
   color: #fff;
 }
+
 .modal__box .cont {
   background-color: #282936;
   height: 100%;
@@ -499,14 +573,16 @@ li {
   border-bottom-right-radius: 0.5rem;
   overflow-y: auto;
 }
-.modal__box .cont > div {
+
+.modal__box .cont>div {
   display: none;
 }
 
-.modal__box .cont > div.active {
+.modal__box .cont>div.active {
   display: block;
   height: 100%;
 }
+
 .modal__close {
   position: absolute;
   right: 100px;
@@ -519,9 +595,11 @@ li {
   transition: all 0.3s;
   opacity: 0;
 }
+
 .modal__close:hover {
   background-color: #13142d7d;
 }
+
 .modal__close svg {
   color: #fff;
 }
@@ -534,7 +612,8 @@ li {
 
 .modal__cont.show .modal__box {
   /*스크립트 배경*/
-  animation: zoomOut 0.5s 1s ease forwards; /*초를 두개써서딜레이를 줄 수 있다*/
+  animation: zoomOut 0.5s 1s ease forwards;
+  /*초를 두개써서딜레이를 줄 수 있다*/
 }
 
 .modal__cont.show .modal__close {
@@ -545,9 +624,11 @@ li {
 .modal__cont.show.hide {
   animation: foldIn 0.3s 0.3s ease backwards;
 }
+
 .modal__cont.show.hide .modal__box {
   animation: zoomIn 0.5s 1s ease backwards;
 }
+
 .modal__cont.show.hide .modal__close {
   /* 닫기버튼*/
   animation: closeIn 0.3s 0.6s ease backwards;
@@ -558,17 +639,21 @@ li {
   0% {
     transform: scaleX(0) scaleY(0.001);
   }
+
   50% {
     transform: scaleX(1) scaleY(0.001);
   }
+
   100% {
     transform: scaleX(1) scaleY(1);
   }
 }
+
 @keyframes closeOut {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -578,25 +663,31 @@ li {
   0% {
     transform: scaleX(1) scaleY(1);
   }
+
   50% {
     transform: scaleX(1) scaleY(0.001);
   }
+
   100% {
     transform: scaleX(0) scaleY(0.001);
   }
 }
+
 @keyframes zoomOut {
   0% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 @keyframes zoomIn {
   100% {
     transform: scale(1);
   }
+
   0% {
     transform: scale(0);
   }
@@ -606,29 +697,37 @@ li {
   #header {
     width: 100%;
   }
+
   .modal__box {
     width: 96%;
   }
+
   .modal__box .title {
     overflow: hidden;
   }
+
   .modal__box .title .dot {
     display: none;
   }
+
   .modal__box .title .tabs {
     margin-left: 0;
   }
-  .modal__box .title .tabs > div .close {
+
+  .modal__box .title .tabs>div .close {
     display: none;
   }
 }
+
 @media (max-width: 600px) {
   #header {
     text-align: center;
   }
+
   #header h1 {
     line-height: 1.4;
   }
+
   .modal__box {
     width: 96%;
   }
@@ -638,11 +737,13 @@ li {
 #footer {
   text-align: center;
 }
+
 #footer a {
   color: #000;
   font-family: "NexonLv1Gothic";
   padding-bottom: 50px;
 }
+
 #footer a:hover {
   text-decoration: underline;
 }

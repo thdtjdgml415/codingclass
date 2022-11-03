@@ -1849,12 +1849,12 @@ searchRestart.addEventListener("click", restart);
 
 //음악 클릭
 musicPlayBtn.addEventListener("click", () => {
-  music.play();
+  music.pause();
   musicStopBtn.style.display = "inline-block";
   musicPlayBtn.style.display = "none";
 });
 musicStopBtn.addEventListener("click", () => {
-  music.pause();
+  music.play();
   musicPlayBtn.style.display = "inline-block";
   musicStopBtn.style.display = "none";
 });
@@ -1868,7 +1868,7 @@ searchHint.addEventListener("click", () => {
 //아이콘 클릭시 등장
 document.querySelector(".icon2").addEventListener("click", () => {
   searchWrap.classList.toggle("show");
-  music.stop();
+  music.pause();
 });
 
 //게임 끄기
