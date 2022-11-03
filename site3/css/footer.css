@@ -1,7 +1,10 @@
 .footer__inner {
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid #666;
+    padding-top: 50px;
 }
+
 
 .footer__inner .footer__desc p {
     margin-bottom: 21px;

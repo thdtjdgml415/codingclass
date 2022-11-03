@@ -1,4 +1,5 @@
 .music__wrap {}
+
 .music__inner {
     width: 500px;
     background: #000;
@@ -9,9 +10,11 @@
     padding-top: 0;
     display: none;
 }
+
 .music__inner.show {
     display: block;
 }
+
 .music__header {
     width: 100%;
     height: 30px;
@@ -21,37 +24,45 @@
     color: #fff;
     border-bottom: 1px dashed #fff;
 }
+
 .music__header h2 {
     font-size: 14px;
 }
+
 .music__contents {
     background: #c4c4c4;
     width: 100%;
     height: 100%;
 }
+
 .music__view {
     display: flex;
     align-items: center;
     text-align: center;
     padding: 20px;
 }
+
 .music__view .img {
     width: 40%;
 }
+
 .music__view .img img {
     width: 60%;
 }
-.music__view  .title {
+
+.music__view .title {
     width: 70%;
     text-align: center;
     justify-content: space-between;
 
 }
-.music__view .title  h3 {
+
+.music__view .title h3 {
     font-size: 30px;
     line-height: 1.2;
     margin-bottom: 5px;
 }
+
 .music__view .title p {
     color: red;
 }
@@ -61,34 +72,40 @@
     padding: 20px;
     padding-top: 0;
 }
+
 .music__control .progress {
     width: 100%;
     height: 6px;
     background: #000;
     border-radius: 5px;
 }
-.music__control .progress .bar{
+
+.music__control .progress .bar {
     width: 30%;
     height: inherit;
     background: #7FFF5B;
     border-radius: 5px;
 }
-.music__control .progress .timer{
+
+.music__control .progress .timer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 3px;
 }
+
 .music__control .control {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
 }
+
 .music__control .control i:hover {
     background-color: #ccc;
 
 }
+
 .control i {
     transform: scale(0.7);
 }
@@ -96,9 +113,10 @@
 .music__volume {
     position: relative;
     border-radius: 5px;
-    margin-top: 30px;  
-    margin-left: 20px;  
+    margin-top: 30px;
+    margin-left: 20px;
 }
+
 .music__volume img {
     position: absolute;
     left: -25px;
@@ -108,85 +126,102 @@
 }
 
 .music__control .control .repeat {
-   background-image: url(../img/musicbutton.svg);
-   width: 50px;
-   height: 50px;
-   background-position: -200px 0;    
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: -200px 0;
 }
+
 .music__control .control .prev {
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
-    background-position: -100px 0;    
- }
- .music__control .control div .play {
+    background-position: -100px 0;
+}
+
+.music__control .control div .play {
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
     background-position: 0 0;
-    display: block;    
- }
- .music__control .control div .stop {
+    display: block;
+}
+
+.music__control .control div .stop {
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
-    background-position: -50px 0;   
-    display: block; 
- }
- .music__control .control .next {
+    background-position: -50px 0;
+    display: block;
+}
+
+.music__control .control .next {
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
-    background-position: -150px 0;    
- }
- .music__control .control .list {
+    background-position: -150px 0;
+}
+
+.music__control .control .list {
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
-    background-position: -343px 0;    
- }
+    background-position: -343px 0;
+}
+
 .music__control .control .repeat_one {
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
     background-position: -300px 0;
-    display: block;  
+    display: block;
 }
+
 .music__control .control .shuffle {
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
     background-position: -250px 0;
-    display: block;  
+    display: block;
 }
+
 .music__control .control .prev {}
+
 .music__control .control .play {}
+
 .music__control .control .stop {}
+
 .music__control .control .next {}
+
 .music__control .control .list {}
+
 .music__footer {
     background: #c4c4c4;
 }
+
 .music__list {
     padding: 20px;
     position: relative;
 }
-.music__list h3{
+
+.music__list h3 {
     font-size: 24px;
     border-top: 3px solid #000;
 }
-.music__list h3 .list{
+
+.music__list h3 .list {
     background-image: url(../img/musicbutton.svg);
     width: 24px;
     height: 24px;
     background-position: -350px 0;
-    display: inline-block;  
+    display: inline-block;
     vertical-align: -5px;
     margin-right: 5px;
     background-size: contain;
     background-repeat: no-repeat;
 }
-.music__list .closeList{
+
+.music__list .closeList {
     background-image: url(../../assets/img/musicbutton.svg);
     width: 24px;
     height: 48px;
@@ -195,33 +230,47 @@
     background-position: -222px 17px;
     position: absolute;
     right: 40px;
-    top: 7px; 
+    top: 7px;
 
 }
+
 .music__list ul {
     max-height: 200px;
     overflow-y: scroll;
 }
-.music__list ul.show {
 
-}
+.music__list ul.show {}
+
 .music__list li {
     border-bottom: 1px solid #000;
     list-style: none;
     position: relative;
 }
+
 .music__list li.playing {
-    color: #7FFF5B;;
+    color: #7FFF5B;
+    ;
 }
+
 .music__list li strong {
     display: block;
     font-size: 20px;
 }
+
 .music__list li em {
     font-style: normal;
 }
+
 .music__list li span {
     position: absolute;
     right: 0;
     top: 25px;
+}
+
+.musicClose {
+    background: #000;
+    width: 100px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
 }

@@ -156,19 +156,19 @@ function EndGame() {
   const ResultGame = document.querySelector(".memory__wrap .result__memory");
   if (timeUp < 30) {
     clearInterval(memoryInterval);
-    ResultGame.innerHTML = `당신의 시간은 ${
-      100 - timeUp / 100
-    }초 상위 20% 입니다.`;
+    ResultGame.innerHTML = `당신의 시간은${timeUp}초 <br/> 점수는${
+      100 - Math.floor((timeUp / 100) * 60)
+    }점 상위 20% 입니다.`;
   } else if (30 <= timeUp && 60 >= timeUp) {
     clearInterval(memoryInterval);
-    ResultGame.innerHTML = `당신의 시간은 ${
-      100 - timeUp / 100
-    }초 그냥 사.람.정.도 입니다.`;
+    ResultGame.innerHTML = `당신의 시간은${timeUp}초 <br/>  점수는${
+      100 - Math.floor((timeUp / 100) * 60)
+    }점 그냥 사.람.정.도 입니다.`;
   } else {
     clearInterval(memoryInterval);
-    ResultGame.innerHTML = `당신의 시간은 ${
-      100 - timeUp / 100
-    }초 그냥 하지마세요`;
+    ResultGame.innerHTML = `당신의 시간은${timeUp}초<br/>  점수는${
+      100 - Math.floor((timeUp / 100) * 60)
+    }점 그냥 하지마세요`;
   }
 }
 
