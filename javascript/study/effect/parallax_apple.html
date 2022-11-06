@@ -55,20 +55,84 @@
       .sec1_text1 {
         font-size: 8vw;
         white-space: nowrap;
+        background: #112;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        width: 100%;
       }
+      .sec1_text1_p1 {
+        color: #fff;
+        font-size: 5vw;
+      }
+
+      /* star */
+      .star {
+        --size: 20vmin;
+        --holes: calc(var(--size) * 0.495);
+        width: var(--size);
+        aspect-ratio: 1/1;
+        position: fixed;
+        background: white;
+        --mask: radial-gradient(
+            var(--holes) at var(--holes) var(--holes),
+            #0000 99%,
+            #000
+          )
+          calc(var(--holes) * -1) calc(var(--holes) * -1);
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+        border-radius: 50%;
+        animation: sparkle 1s linear forwards;
+      }
+      @keyframes sparkle {
+        0% {
+          transform: scale(0);
+        }
+        25% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .sec1_text1 h1 {
+        line-height: 100%;
+        margin: 0;
+        color: rgba(200, 200, 255, 0.25);
+        font-family: system-ui;
+        font-size: 4rem;
+        text-align: center;
+      }
+      /* //star */
+
       .sec1_text2 {
-        font-size: 10vw;
+        font-size: 3vw;
         white-space: nowrap;
         font-weight: 700;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+      }
+      .sec1_text2 img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 50px;
       }
       .sec1_text2 .sec1_text2_p2 {
         font-weight: 500;
-        margin-left: 300px;
+        font-size: 16px;
+        color: #000;
       }
       .sec1_text3 {
         width: 100%;
         height: 100vh;
-        background: url("https://images.unsplash.com/photo-1652028506778-002ebfd287f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
         background-size: cover;
         background-position: center;
       }
@@ -161,20 +225,27 @@
             data-0="top: 50%; opacity: 1"
             data-1000="top:30%; opacity: 0"
           >
-            안녕하세요!
+            <h1>Song Sung Hee</h1>
+            <p class="sec1_text1_p1">FRONT-END DEVELOPER Portfolio</p>
           </div>
           <div
             class="sec1_text2 fixed"
             data-1000="opacity: 0; top: 50%; transform: translate(-50%, -50%) scale:(1)"
-            data-1500="opacity:1; left: 70%; transform: translate(-50%, -50%) scale:(1.4)"
-            data-2000="opacity:1; left: 30%; transform: translate(-50%, -50%) scale:(0)"
+            data-2000="opacity:1; top: 50%; transform: translate(-50%, -50%) scale:(1.4)"
+            data-3000="opacity:0; top: 50%; transform: translate(-50%, -50%) scale:(0)"
           >
             <img
-              src="https://github.com/thdtjdgml415/codingclass/blob/main/assets/ico/favicon-128.png?raw=true"
+              src="/javascript/assets/img/KakaoTalk_20221107_023336821.jpg"
               alt="사진"
             />
-            <span> FRONT-END DEVELOPER</span>
-            <p class="sec1_text2_p2">Portfolio</p>
+            <p class="sec1_text2_p2">
+              안녕하세요! <br />
+              저는 프론트 엔드를 꿈꾸는 여행자 송성희입니다.😎
+              <br />
+              설렘과 호기심이 가득한 여행을 시작합니다. <br />
+
+              안전띠를 착용해주세요!
+            </p>
           </div>
           <div
             class="sec1_text3 fixed"
@@ -358,6 +429,21 @@
         requestAnimationFrame(scroll); //1분에 60번씩만 실행해주는 메서드 메모리를 아낄 수 있다.
       }
       scroll();
+
+      //별 애니메이션 추가
+
+      function addStar() {
+        var s = document.createElement("div");
+        s.className = "star";
+        s.style.setProperty("--size", Math.random() * 10 + 3 + "vmin");
+        s.style.left = Math.floor(Math.random() * 100) + "%";
+        s.style.top = Math.floor(Math.random() * 100) + "%";
+        s.onanimationend = function () {
+          this.remove();
+        };
+        document.body.appendChild(s);
+      }
+      setInterval(addStar, 50);
     </script>
   </body>
 </html>

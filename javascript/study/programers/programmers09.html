@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] 수박수박수박수박수박수?</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">수박수박수박수박수박수?</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          길이가 n이고, "수박수박수박수...."와 같은 패턴을 유지하는 문자열을
+          <br />
+          리턴하는 함수, solution을 완성하세요. 예를들어 n이 4이면 "수박수박"을
+          <br />
+          리턴하고 3이라면 "수박수"를 리턴하면 됩니다.
+        </p>
+        <br />
+        <hr />
+        <h4>제한 사항</h4>
+        <p class="t_box">n은 길이 10,000이하인 자연수입니다.</p>
+
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>n</th>
+              <th>return</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">3</td>
+              <td class="ce">"수박수"</td>
+            </tr>
+            <tr>
+              <td class="ce">4</td>
+              <td class="ce">"수박수박"</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <h3 class="t_tit">풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(n) {
+    let o = ""
+    for(let i = 1; i&lt;=n; i++){
+        if(i%2==1) {
+            o += "수"
+        } else {
+            o += "박"
+        }
+    }
+    return o;
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc3">
+            이번 문제는 단순한 반복문 문제입니다. for문을 사용해서 짝수 배열일때
+            <br />
+            "박" 홀수 배열일때 "수" 를 변수 o에 저장하도록 하였습니다. <br />
+          </p>
+        </div>
+        <hr />
+        <h3 class="t_tit">다른사람 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">const solution = n => {
+    return '수박'.repeat(n/2) + (n%2 === 1 ? '수' : '');
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc2">
+            삼항 연산자를 사용한 풀이를 가져와 보았습니다. 수박으로 계속 <br />
+            반복되게 셋팅하고 repeat메소드를 활용해 홀수일때 수를 붙여서 <br />
+            사이사이에 붙도록 하였습니다. <br />
+            이것 또한 repeat를 활용한 신기한 풀이였습니다. 알고리즘은 항상
+            <br />
+            충격을 주는 풀이가 많은 거 같습니다. 새로운 풀이를 보면 볼 때마다
+            <br />
+            새로워서 놀랍네요. <br />
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

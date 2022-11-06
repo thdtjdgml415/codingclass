@@ -1,4 +1,3 @@
-
 /* 여백 초기화 */
 body,
 div,
@@ -26,10 +25,10 @@ td,
 input,
 button,
 figure,
-figcaption{
+figcaption {
     margin: 0;
     padding: 0;
-}  
+}
 
 /* 시멘틱 태그 초기화 */
 article,
@@ -45,6 +44,7 @@ nav,
 section {
     display: block;
 }
+
 /* font 초기화 */
 body,
 button,
@@ -56,17 +56,20 @@ textarea {
     font-family: 'NexonLv1Gothic', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
 
 }
+
 /* 링크 초기화 */
 a {
     text-decoration: none;
     color: #000;
 }
+
 /* 목록 초기화 */
 li,
 ol,
-ul{
+ul {
     list-style: none;
 }
+
 /* 제목 초기화 */
 h1,
 h2,
@@ -76,43 +79,53 @@ h5,
 h6 {
     font-weight: normal;
 }
+
 /* 폰트 스타일 초기화 */
-em, address {
+em,
+address {
     font-style: normal;
 }
+
 /* 이미지 초기화 */
 
 /* 보더 초기화 */
-img, fieldset, button {
+img,
+fieldset,
+button {
     border: 0;
 }
+
 /* 클리어 픽스 */
 .clearfix {
     zoom: 1;
 }
+
 .clearfix::before,
 .clearfix::after {
     content: '';
     display: block;
     line-height: 0;
 }
+
 .clearfix::after {
     clear: both;
 }
+
 /* 블라인드 효과 */
-.blind{
-    position:absolute;
-    clip:rect(0 0 0 0);
-    width:1px;
-    height:1px;
-    margin:-1px;
-    overflow:hidden
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden
 }
+
 /* 이미지 대체(ir)효과 */
 .ir {
     display: block;
     overflow: hidden;
     font-size: 0;
     line-height: 0;
-    text-indent: -9999px;    
+    text-indent: -9999px;
 }
