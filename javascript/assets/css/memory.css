@@ -1,3 +1,9 @@
+.game__box {
+    position: relative;
+    left: 160px;
+    top: 100px;
+}
+
 .memory__wrap {
     display: none;
 }
