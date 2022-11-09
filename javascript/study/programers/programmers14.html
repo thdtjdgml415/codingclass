@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[프로그래머스] 정수 내림차순으로 배치하기</title>
+    <title>[프로그래머스] 나머지가 1이 되는 수 찾기</title>
     <link rel="stylesheet" href="/javascript/assets/css/style.css" />
     <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
   </head>
@@ -33,72 +33,60 @@
 
     <main id="main">
       <div class="document">
-        <h3 class="t_tit">정수 내림차순으로 배치하기</h3>
+        <h3 class="t_tit">나머지가 1이 되는 수 찾기</h3>
         <h4 class="t_tit2">설명</h4>
         <p class="t_desc2">
-          String형 배열 seoul의 element중 "Kim"의 위치 x를 찾아, "김서방은 x에
+          자연수 n이 매개변수로 주어집니다. n을 x로 나눈 나머지가 1이 되도록
           <br />
-          있다"는 String을 반환하는 함수, solution을 완성하세요. seoul에 "Kim"은
+          하는 가장 작은 자연수 x를 return 하도록 solution 함수를 완성해주세요.
           <br />
-          오직 한 번만 나타나며 잘못된 값이 입력되는 경우는 없습니다. <br />
+          답이 항상 존재함은 증명될 수 있습니다. <br />
         </p>
         <br />
         <hr />
         <h4>제한 사항</h4>
-        <p class="t_box">
-          seoul은 길이 1 이상, 1000 이하인 배열입니다. <br />
-          seoul의 원소는 길이 1 이상, 20 이하인 문자열입니다. <br />
-          "Kim"은 반드시 seoul 안에 포함되어 있습니다. <br />
-        </p>
+        <p class="t_box">3 ≤ n ≤ 1,000,000</p>
 
         <table class="t_table">
           <thead>
             <tr>
-              <th>seoul</th>
+              <th>n</th>
               <th>return</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="ce">["Jane", "Kim"]</td>
-              <td class="ce">"김서방은 1에 있다"</td>
+              <td class="ce">10</td>
+              <td class="ce">3</td>
+            </tr>
+            <tr>
+              <td class="ce">12</td>
+              <td class="ce">11</td>
             </tr>
           </tbody>
         </table>
         <br />
         <h3 class="t_tit">정답 풀이</h3>
         <div class="t_code">
-          <pre><code class="language-js">function solution(seoul) {
-    return `김서방은 ${seoul.indexOf("Kim")}에 있다`
+          <pre><code class="language-js">function solution(n) {
+
+    for(let i = 2; i &lt; n; i++) {
+        if(n%i===1 && i&lt;=1000000) {
+            return i      
+        }  
+    }
 }
 </code></pre>
           <h3 class="t_tit">해설</h3>
           <p class="t_desc2">
-            이번 문제는 재밌는 문제였다. 살짝 뜬금없는 해설의 문제로 배열속에
+            이번에는 반복문과 조건문을 사용해서 푼 문제이다. n을 나눴을때 <br />
+            나머지가 2이 되는 가장 작은 수를 출력하려고 했다. 제한사항은 i는
             <br />
-            Kim이라는 문자열의 인덱스 위치 값을 찾아서 "김서방은 x에 있다"에서
+            1보다 크고 백만보다 작기 때문에 i를 3부터 1씩 증가시키면서 계속
             <br />
-            x에 위치를 넣어주는 문제로 간단하게 indexOf메소드를 사용해 출력하는
+            나누어 주었다. i가 점차 증가하면서 가장 처음으로 1이 나머지가 되는
             <br />
-            문제이다
-          </p>
-        </div>
-        <hr />
-        <h3 class="t_tit">다른사람 풀이</h3>
-        <div class="t_code">
-          <pre><code class="language-js">
-    const solution = (arr) => `김서방은 ${arr.findIndex(s => s === 'Kim')}에 있다`;
-</code></pre>
-          <h3 class="t_tit">해설</h3>
-          <p class="t_desc3">
-            findIndex라는 메소드는 처음 보았기 때문에 가져왔다. indexOf와 <br />
-            findIndex중 어느것이 퍼포먼스가 좋아서 점수를 더 많이 주는지는
-            <br />
-            모르지만 나중에 자주 쓸 수 있는 메소드 인거 같아서 찾아 보았다.
-            <br />
-            findIndex는 주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한
-            <br />
-            인덱스 값을 반환한다.
+            수가 return으로 반환되고 끝나기 때문에 가장 작은 수가 된다 <br />
           </p>
         </div>
       </div>

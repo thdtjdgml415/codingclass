@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../assets/css/modal.css" />
     <link rel="stylesheet" href="../../assets/css/gamesearch.css" />
     <link rel="stylesheet" href="../../assets/css/memory.css" />
+    <link rel="stylesheet" href="../../assets/css/tetris.css" />
     <link rel="stylesheet" href="../../assets/css/Frankenstein.css" />
     <link rel="stylesheet" href="../../assets/css/dracula.css" />
   </head>
@@ -1148,6 +1149,49 @@
         <!--/Frankenstein-->
       </div>
       <!-- /Memory -->
+      <!-- tetris -->
+      <div class="tetris__wrap">
+        <div class="tetris__inner">
+          <div class="tetris__title">TETRIS</div>
+          <div class="tetris__score">점수: 0</div>
+          <div class="start__inner">
+            <p class="tetreis__rule show">테트리스 게임을 시작하시겠습니다?</p>
+            <div class="tetris__start show">게임시작</div>
+          </div>
+          <div class="tetris__restart">다시 최고기록에 도전해보세요!</div>
+          <div class="tetris__animation">
+            <div class="animation__inner">
+              <div class="screen"></div>
+              <ul class="dance-animation">
+                <li class="dance-frame dance-animation--dancer1"></li>
+                <li class="dance-frame dance-animation--dancer2"></li>
+                <li class="dance-frame dance-animation--dancer3"></li>
+                <li class="dance-frame dance-animation--dancer4"></li>
+                <li class="dance-frame dance-animation--dancer5"></li>
+                <li class="dance-frame dance-animation--dancer6"></li>
+                <li class="dance-frame dance-animation--dancer7"></li>
+                <li class="dance-frame dance-animation--dancer8"></li>
+                <li class="dance-frame dance-animation--dancer9"></li>
+                <li class="dance-frame dance-animation--dancer10"></li>
+                <li class="dance-frame dance-animation--dancer11"></li>
+              </ul>
+              <iframe
+                width="0"
+                height="0"
+                src="https://www.1youtuberepeater.com/watch?v=kWvbJsB0OBc&name=Tom+Jones+Its+Not+Unusual+With+Lyrics"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="tetis__play">
+            <div class="playground">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /tetris -->
     </div>
     <!-- modal -->
     <div class="modal__wrap">
@@ -1196,6 +1240,7 @@
     <script src="../../assets/js/music.js"></script>
     <script src="../../assets/js/searchgame.js"></script>
     <script src="../../assets/js/memory.js"></script>
+    <script src="../../assetS/js/tetris.js"></script>
     <script>
       const mouseMove = (e) => {
         //마우스 좌표값
@@ -1241,9 +1286,49 @@
         //   );
         // },
       });
-      $(".music__wrap").draggable();
-      $(".search__wrap").draggable();
-      $(".memory__wrap").draggable();
+      $(".memory__wrap").draggable({
+        drag: function () {
+          $(this).css("z-index", "1000");
+        },
+        stop: function () {
+          $(".music__wrap").css("z-index", "800");
+          $(".search__wrap").css("z-index", "800");
+          $(".tetris__wrap").css("z-index", "800");
+        },
+      });
+
+      $(".music__wrap").draggable({
+        drag: function () {
+          $(this).css("z-index", "1000");
+        },
+        stop: function () {
+          $(".memory__wrap").css("z-index", "800");
+          $(".search__wrap").css("z-index", "800");
+          $(".tetris__wrap").css("z-index", "800");
+        },
+      });
+
+      $(".search__wrap").draggable({
+        drag: function () {
+          $(this).css("z-index", "1000");
+        },
+        stop: function () {
+          $(".memory__wrap").css("z-index", "800");
+          $(".music__wrap").css("z-index", "800");
+          $(".tetris__wrap").css("z-index", "800");
+        },
+      });
+      $(".tetris__wrap").draggable({
+        drag: function () {
+          $(this).css("z-index", "1000");
+        },
+        stop: function () {
+          $(".memory__wrap").css("z-index", "800");
+          $(".search__wrap").css("z-index", "800");
+          $(".music__wrap").css("z-index", "800");
+        },
+      });
+
       function printTime() {
         const clock = document.querySelector(".time");
         const now = new Date();
