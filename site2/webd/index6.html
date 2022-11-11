@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정부24</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .clearfix::after,
+      .clearfix::before {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      img {
+        width: 100%;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 1000px;
+      }
+      #header {
+        width: 300px;
+        float: left;
+      }
+      #header h1 img {
+        width: 200px;
+        height: 100px;
+      }
+      #header .nav {
+        display: inline-block;
+        margin-left: 20px;
+      }
+      #header .nav li {
+        padding-bottom: 5px;
+      }
+      #header .nav li a {
+        font-size: 23px;
+      }
+      #header .nav li.active a {
+        color: aqua;
+      }
+      #header .nav li ul.submenu {
+        display: none;
+      }
+      #header .nav li ul.submenu li a {
+        font-size: 14px;
+      }
+
+      #contents {
+        width: 700px;
+        float: left;
+      }
+      .slider__wrap {
+        width: 700px;
+      }
+      .slider__wrap .slider__img {
+        width: 700px;
+        height: 500px;
+      }
+      .slider__wrap .slider__img .slider__inner {
+        height: 500px;
+      }
+      .tab {
+        text-align: center;
+        position: relative;
+      }
+      .tab img {
+        width: 100px;
+      }
+      .tab ul {
+      }
+      .tab ul li {
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 10px;
+        padding: 30px 0;
+      }
+      .tab ul li.active a {
+        color: #000;
+      }
+      .tab ul li a {
+        color: #666;
+      }
+      .tab ul li ul {
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+      .tab ul li ul li {
+        width: 15%;
+      }
+      .tab ul li ul li a {
+        font-size: 16px;
+      }
+
+      #footer {
+        width: 1000px;
+
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap" class="clearfix">
+      <div class="container">
+        <header id="header">
+          <h1><img src="../webd/5/img/logo1.jpg" alt="logo" /></h1>
+          <nav class="nav">
+            <ul>
+              <li class="active">
+                <a href="/"> 서비스 </a>
+                <ul class="submenu">
+                  <li><a href="#">submenu1</a></li>
+                  <li><a href="#">submenu1</a></li>
+                  <li><a href="#">submenu1</a></li>
+                  <li><a href="#">submenu1</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/">정책정보</a>
+                <ul class="submenu">
+                  <li><a href="#">submenu2</a></li>
+                  <li><a href="#">submenu2</a></li>
+                  <li><a href="#">submenu2</a></li>
+                  <li><a href="#">submenu2</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/">기관정보</a>
+                <ul class="submenu">
+                  <li><a href="#">submenu3</a></li>
+                  <li><a href="#">submenu3</a></li>
+                  <li><a href="#">submenu3</a></li>
+                  <li><a href="#">submenu3</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/">고객센터</a>
+                <ul class="submenu">
+                  <li><a href="#">submenu4</a></li>
+                  <li><a href="#">submenu4</a></li>
+                  <li><a href="#">submenu4</a></li>
+                  <li><a href="#">submenu4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <section id="contents">
+          <article id="sliderType">
+            <div class="slider__wrap">
+              <div class="slider__img">
+                <div class="slider__inner">
+                  <div class="slider">
+                    <img src="../webd/3/img/img1.jpg" alt="" />
+                  </div>
+                  <div class="slider">
+                    <img src="../webd/3/img/img2.jpg" alt="" />
+                  </div>
+                  <div class="slider">
+                    <img src="../webd/3/img/img3.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="tab clearfix">
+            <ul>
+              <li class="active">
+                <a href="#">자주찾는 서비스 |</a>
+                <ul>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article1.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article2.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article3.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article4.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article5.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">키워드 서비스</a>
+                <ul style="display: none">
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article1.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article2.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article3.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article4.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                  <li>
+                    <a href=""
+                      ><img
+                        src="../webd/5/img/article5.jpg"
+                        alt=""
+                      />주민등록등본(초본)교부</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="card"></article>
+        </section>
+        <footer id="footer"></footer>
+      </div>
+    </div>
+
+    <script src="../webd/3/script/jquery.min.js"></script>
+    <script>
+      $(".nav > ul > li").hover(
+        function () {
+          $(this).find(".submenu").stop().slideDown();
+        },
+        function () {
+          $(this).find(".submenu").stop().slideUp();
+        }
+      );
+    </script>
+    <script></script>
+  </body>
+</html>

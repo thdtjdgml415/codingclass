@@ -35,6 +35,13 @@
     display: none;
 }
 
+.tetris__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
 .tetreis__rule {
     width: 300px;
     height: 100px;
@@ -120,14 +127,49 @@
     border: 1px solid #fff;
 }
 
+/* 테트리스 블록 */
+.Tmino {
+    border: 10px #a042a2 outset !important;
+    background: #952d98;
+}
+
+.Lmino {
+    border: 10px #ff861a outset !important;
+    background: #ff7900;
+}
+
+.Jmino {
+    border: 10px #1a74c4 outset !important;
+    background: #0065bd;
+}
+
+.Zmino {
+    border: 10px #ef3e4d outset !important;
+    background: #ed2939;
+}
+
+.Smino {
+    border: 10px #69be28 outset !important;
+    background: #69be28;
+}
+
+.Omino {
+    border: 10px #fed01a outset !important;
+    background: #fecb00;
+}
+
+.Imino {
+    border: 10px #1aa9de outset !important;
+    background: #009fda;
+}
+
 .tetris__animation {
     width: 300px;
     height: 400px;
     position: absolute;
     right: 2px;
-    top: -100px;
+    top: 13px;
     z-index: -100;
-
 }
 
 .animation__inner {
@@ -138,8 +180,12 @@
     width: 100%;
     overflow: hidden;
     font-family: "Nunito", sans-serif;
-
+    position: absolute;
+    left: 0;
+    top: -90px;
 }
+
+
 
 /* animation */
 .bar {
@@ -327,39 +373,3 @@
 }
 
 /* //animation */
-
-/* 테트리스 블록 */
-.Tmino {
-    border: 10px #a042a2 outset !important;
-    background: #952d98;
-}
-
-.Lmino {
-    border: 10px #ff861a outset !important;
-    background: #ff7900;
-}
-
-.Jmino {
-    border: 10px #1a74c4 outset !important;
-    background: #0065bd;
-}
-
-.Zmino {
-    border: 10px #ef3e4d outset !important;
-    background: #ed2939;
-}
-
-.Smino {
-    border: 10px #69be28 outset !important;
-    background: #69be28;
-}
-
-.Omino {
-    border: 10px #fed01a outset !important;
-    background: #fecb00;
-}
-
-.Imino {
-    border: 10px #1aa9de outset !important;
-    background: #009fda;
-}

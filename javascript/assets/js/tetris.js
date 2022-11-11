@@ -3,6 +3,8 @@ const playground = tetrisWrap.querySelector(".playground > ul");
 const tetrisStartBtn = tetrisWrap.querySelector(".start__inner .tetris__start");
 const tetrisRule = tetrisWrap.querySelector(".tetreis__rule");
 const tetrisRestart = tetrisWrap.querySelector(".tetris__restart");
+const closeTetris = tetrisWrap.querySelector(".tetris__close");
+const tetrisMusic = tetrisWrap.querySelector("#audio__tetris");
 let tetrisScore = tetrisWrap.querySelector(".tetris__score");
 
 // variables
@@ -380,6 +382,7 @@ function startTetris() {
     tetrisStartBtn.classList.remove("show");
     tetrisScore.classList.add("show");
     tetrisRule.classList.remove("show");
+    tetrisMusic.play();
     init();
   });
 }
@@ -388,11 +391,13 @@ startTetris();
 //game over
 function tetrisOver() {
   tetrisRestart.classList.add("show");
+  tetrisMusic.pause();
 }
 
 //restart btn
 tetrisRestart.addEventListener("click", () => {
   restart();
+  tetrisMusic.play();
 });
 
 //restart game
@@ -403,8 +408,17 @@ function restart() {
   init();
 }
 
+//game close
+closeTetris.addEventListener("click", () => {
+  tetrisWrap.classList.remove("show");
+  tetrisMusic.pause();
+});
+
 //아이콘 클릭시 등장
 const icon4 = document.querySelector(".icon4");
 icon4.addEventListener("click", () => {
   tetrisWrap.classList.toggle("show");
+  scores = 0;
+  playground.innerHTML = "";
+  tetrisMusic.play();
 });

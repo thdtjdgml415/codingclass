@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../assets/css/tetris.css" />
     <link rel="stylesheet" href="../../assets/css/Frankenstein.css" />
     <link rel="stylesheet" href="../../assets/css/dracula.css" />
+    <link rel="stylesheet" href="../../assets/css/subanimation.css" />
   </head>
 
   <body>
@@ -1154,6 +1155,12 @@
         <div class="tetris__inner">
           <div class="tetris__title">TETRIS</div>
           <div class="tetris__score">점수: 0</div>
+          <div class="tetris__close">닫기버튼</div>
+          <audio
+            src="/javascript/assets/audio/tetrismusic.mp3"
+            id="audio__tetris"
+            loop="loop"
+          ></audio>
           <div class="start__inner">
             <p class="tetreis__rule show">테트리스 게임을 시작하시겠습니다?</p>
             <div class="tetris__start show">게임시작</div>
@@ -1183,6 +1190,9 @@
                 allowfullscreen
               ></iframe>
             </div>
+            <!-- skeleton -->
+            <div class="subanimaion__inner"></div>
+            <!-- /skeleton -->
           </div>
           <div class="tetis__play">
             <div class="playground">

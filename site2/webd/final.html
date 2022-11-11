@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUST쇼핑몰</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      img {
+        width: 100%;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 1000px;
+      }
+      #header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .header__menu {
+        margin-top: 10px;
+      }
+      .header__menu .submenu {
+        position: absolute;
+        z-index: 10;
+        display: none;
+        background: #fff;
+        padding-left: 6px;
+      }
+      .header__menu li {
+        width: 110px;
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+      }
+      /* /header */
+      .slideContainer {
+        width: 1000px;
+        height: 500px;
+        overflow: hidden;
+      }
+      .slideWrap {
+        width: 1000px;
+        height: 1500px;
+      }
+      .slide {
+        width: 1000px;
+        height: 500px;
+        position: relative;
+      }
+      .slide p {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        color: #000;
+        background: #ccc;
+        text-align: center;
+      }
+
+      /* /slide */
+      #contents2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .tab {
+        width: 33.3333%;
+        position: relative;
+      }
+      .tab ul {
+      }
+      .tab ul li {
+        display: inline-block;
+      }
+      .tab ul li a {
+        font-size: 20px;
+        font-weight: bold;
+        color: #666;
+      }
+      .tab ul li.on a {
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+      }
+      .tab ul li ul {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        display: none;
+      }
+
+      .tab ul li.on ul {
+        display: inline-block;
+      }
+      .tab ul li ul a {
+      }
+      .tab ul li ul img {
+        width: 30%;
+      }
+      #bannerType {
+        width: 33.3333%;
+      }
+      #cardType {
+        width: 33.33333%;
+      }
+
+      /* /contents2 */
+      #footer {
+        width: 100%;
+        background: #eee;
+        height: 100px;
+      }
+      #footer img {
+        float: left;
+        width: 200px;
+      }
+      #footer p {
+        float: left;
+        width: 60%;
+        height: 90px;
+        text-align: center;
+        line-height: 90px;
+      }
+      #footer .link {
+        float: right;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+      }
+      #footer .link img {
+        width: 27px;
+        height: 27px;
+        margin-right: 20px;
+      }
+      /* /footer */
+    </style>
+  </head>
+  <body>
+    <div class="wrap container">
+      <header id="header">
+        <h1><img src="../webd/7/img/image 3.jpg" alt="logo" /></h1>
+        <nav class="nav">
+          <ul class="header__menu">
+            <li>
+              <a href="#">탑</a>
+              <ul class="submenu">
+                <li>submenu1</li>
+                <li>submenu1</li>
+                <li>submenu1</li>
+                <li>submenu1</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아우터</a>
+              <ul class="submenu">
+                <li>submenu2</li>
+                <li>submenu2</li>
+                <li>submenu2</li>
+                <li>submenu2</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">팬츠</a>
+              <ul class="submenu">
+                <li>submenu3</li>
+                <li>submenu3</li>
+                <li>submenu3</li>
+                <li>submenu3</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">청바지</a>
+              <ul class="submenu">
+                <li>submenu4</li>
+                <li>submenu4</li>
+                <li>submenu4</li>
+                <li>submenu4</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="slideContainer">
+        <div class="slideWrap">
+          <div class="slide">
+            <p>슬라이드내용1</p>
+            <a href="#"
+              ><img src="../webd/5/img/slider1.jpg" alt="슬라이드이미지1"
+            /></a>
+          </div>
+          <div class="slide">
+            <p>슬라이드내용2</p>
+            <a href="#"
+              ><img src="../webd/5/img/slider1.jpg" alt="슬라이드이미지1"
+            /></a>
+          </div>
+          <div class="slide">
+            <p>슬라이드내용3</p>
+            <a href="#"
+              ><img src="../webd/5/img/slider1.jpg" alt="슬라이드이미지1"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <section id="contents2">
+        <article class="tab">
+          <ul>
+            <li class="on">
+              <a href="#">공지사항</a>
+              <ul>
+                <li>공지사항입니다. 공지사항입니다.</li>
+                <li>공지사항입니다. 공지사항입니다.</li>
+                <li>공지사항입니다. 공지사항입니다.</li>
+                <li>공지사항입니다. 공지사항입니다.</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">갤러리</a>
+              <ul>
+                <a href="#"><img src="../webd/7/img/gallery.jpg" alt="" /></a>
+                <a href="#"><img src="../webd/7/img/gallery.jpg" alt="" /></a>
+                <a href="#"><img src="../webd/7/img/gallery.jpg" alt="" /></a>
+              </ul>
+            </li>
+          </ul>
+        </article>
+        <article id="bannerType">
+          <img src="../webd/7/img/banner.jpg" alt="" />
+        </article>
+        <article id="cardType">
+          <a href="#"><img src="../webd/7/img/card.png" alt="" /></a>
+        </article>
+      </section>
+
+      <footer id="footer">
+        <img src="../webd/7/img/logo2.jpg" alt="" />
+        <p>CopyRight All right JUST 쇼핑몰</p>
+        <div class="link">
+          <img src="../webd/7/img/F.png" alt="" />
+          <img src="../webd/7/img/F.png" alt="" />
+          <img src="../webd/7/img/F.png" alt="" />
+        </div>
+      </footer>
+    </div>
+    <script src="../webd/3/script/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //header menu--------------------------------------------------------
+        $(".nav > .header__menu > li").hover(
+          function () {
+            $("*").find(".submenu").stop().slideDown();
+          },
+          function () {
+            $("*").find(".submenu").stop().slideUp();
+          }
+        );
+
+        //slide---------------------------------------------------------------
+        setInterval(function () {
+          $(".slideWrap").animate({ "margin-top": "-300" }, function () {
+            $(".slide:first").appendTo(".slideWrap");
+            $(".slideWrap").css({ "margin-top": "0" });
+          });
+        }, 3000);
+
+        //tab-----------------------------------------------------------------
+        $(".tab li").click(function () {
+          var idx = $(this).index();
+
+          $(".tab > li > ul").hide().removeClass("on");
+          $(".tab > li > ul").eq(idx).show().addClass("on");
+
+          $(".tab li").removeClass("on");
+          $(this).addClass("on");
+        });
+
+        //popUpBox---------------------------------------------------------
+        $(".notice li:nth-child(1)").click(function () {
+          $(".popUpBox").show();
+        });
+
+        $(".popUpBox button").click(function () {
+          $(".popUpBox").hide();
+        });
+      });
+    </script>
+  </body>
+</html>
