@@ -30,10 +30,10 @@
         display: flex;
         justify-content: space-between;
       }
-      .nav .header__menu {
+      .header__menu {
         margin-top: 10px;
       }
-      .nav .header__menu .submenu {
+      .header__menu .submenu {
         position: absolute;
         z-index: 10;
         display: none;
@@ -47,28 +47,39 @@
         position: relative;
       }
       /* /header */
-      .slider__inner {
+      .slideContainer {
         width: 1000px;
         height: 500px;
         overflow: hidden;
       }
-      .slider__wrap {
+      .slideWrap {
         width: 1000px;
         height: 1500px;
       }
-      .slider__wrap .slider {
+      .slide {
         width: 1000px;
         height: 500px;
+        position: relative;
       }
-      .slider__wrap .slider img {
+      .slide p {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        color: #000;
+        background: #ccc;
+        text-align: center;
       }
+
       /* /slide */
       #contents2 {
         display: flex;
         flex-wrap: wrap;
       }
       .tab {
-        width: 33.333%;
+        width: 33.3333%;
         position: relative;
       }
       .tab ul {
@@ -76,34 +87,38 @@
       .tab ul li {
         display: inline-block;
       }
-      .tab ul li.on a {
-        color: #000;
-        font-size: 20px;
-        font-weight: bold;
-      }
       .tab ul li a {
-        color: #ccc;
         font-size: 20px;
         font-weight: bold;
+        color: #666;
+      }
+      .tab ul li.on a {
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
       }
       .tab ul li ul {
         position: absolute;
-        top: 40px;
         left: 0;
+        top: 50px;
         display: none;
       }
+
       .tab ul li.on ul {
         display: inline-block;
       }
-      .tab ul li ul img {
-        width: 31%;
+      .tab ul li ul a {
       }
-      #banner {
-        width: 33.333%;
+      .tab ul li ul img {
+        width: 30%;
+      }
+      #bannerType {
+        width: 33.3333%;
       }
       #cardType {
-        width: 33.333%;
+        width: 33.33333%;
       }
+
       /* /contents2 */
       #footer {
         width: 100%;
@@ -181,16 +196,25 @@
           </ul>
         </nav>
       </header>
-      <div class="slider__inner">
-        <div class="slider__wrap">
-          <div class="slider">
-            <img src="../webd/2/img/slider__bg01.jpg" alt="" />
+      <div class="slideContainer">
+        <div class="slideWrap">
+          <div class="slide">
+            <p>슬라이드내용1</p>
+            <a href="#"
+              ><img src="../webd/5/img/slider1.jpg" alt="슬라이드이미지1"
+            /></a>
           </div>
-          <div class="slider">
-            <img src="../webd/2/img/slider__bg01.jpg" alt="" />
+          <div class="slide">
+            <p>슬라이드내용2</p>
+            <a href="#"
+              ><img src="../webd/5/img/slider1.jpg" alt="슬라이드이미지1"
+            /></a>
           </div>
-          <div class="slider">
-            <img src="../webd/2/img/slider__bg01.jpg" alt="" />
+          <div class="slide">
+            <p>슬라이드내용3</p>
+            <a href="#"
+              ><img src="../webd/5/img/slider1.jpg" alt="슬라이드이미지1"
+            /></a>
           </div>
         </div>
       </div>
@@ -200,10 +224,10 @@
             <li class="on">
               <a href="#">공지사항</a>
               <ul>
-                <li>공지사항입니다.공지사항입니다.</li>
-                <li>공지사항입니다.공지사항입니다.</li>
-                <li>공지사항입니다.공지사항입니다.</li>
-                <li>공지사항입니다.공지사항입니다.</li>
+                <li>공지사항입니다. 공지사항입니다.</li>
+                <li>공지사항입니다. 공지사항입니다.</li>
+                <li>공지사항입니다. 공지사항입니다.</li>
+                <li>공지사항입니다. 공지사항입니다.</li>
               </ul>
             </li>
             <li>
@@ -216,11 +240,11 @@
             </li>
           </ul>
         </article>
-        <article id="banner">
+        <article id="bannerType">
           <img src="../webd/7/img/banner.jpg" alt="" />
         </article>
         <article id="cardType">
-          <img src="../webd/7/img/card.png" alt="" />
+          <a href="#"><img src="../webd/7/img/card.png" alt="" /></a>
         </article>
       </section>
 
@@ -249,20 +273,23 @@
 
         //slide---------------------------------------------------------------
         setInterval(function () {
-          $(".slider__wrap").animate({ "margin-top": "-500" }, function () {
-            $(".slider:first").appendTo(".slider__wrap");
-            $(".slider__wrap").css({ "margin-top": "0" });
+          $(".slideWrap").animate({ "margin-top": "-500px" }, function () {
+            $(".slide:first").appendTo(".slideWrap");
+            $(".slideWrap").css({ "margin-top": "0" });
           });
         }, 3000);
+
         //tab-----------------------------------------------------------------
         $(".tab li").click(function () {
-          let idx = $(this).index();
+          var idx = $(this).index();
+
           $(".tab > li > ul").hide().removeClass("on");
           $(".tab > li > ul").eq(idx).show().addClass("on");
 
-          $(".tab  li").removeClass("on");
+          $(".tab li").removeClass("on");
           $(this).addClass("on");
         });
+
         //popUpBox---------------------------------------------------------
         $(".notice li:nth-child(1)").click(function () {
           $(".popUpBox").show();

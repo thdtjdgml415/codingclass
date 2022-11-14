@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] 문자열 내 p와 y의 개수</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">문자열 내 p와 y의 개수</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          문자열 s의 길이 : 50 이하의 자연수 <br />
+          문자열 s는 알파벳으로만 이루어져 있습니다. <br />
+        </p>
+        <br />
+        <hr />
+        <h4>제한 사항</h4>
+        <p class="t_box">n은 10,000,000,000이하인 자연수입니다.</p>
+
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>s</th>
+              <th>answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">"pPoooyY"</td>
+              <td class="ce">true</td>
+            </tr>
+            <tr>
+              <td class="ce">"Pyy"</td>
+              <td class="ce">false</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <h3 class="t_tit">정답 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(s){
+    let x = [...s]
+    let p =0;
+    let y =0;
+    let z =0;
+    for(let i = 0; i&lt;=x.length; i++) {
+        if(x[i] == 'p' || x[i]=='P') {
+            p++
+        } else if (x[i]=='y'||x[i]=='Y'){
+            y++
+        } else {
+            z++
+        }
+    }
+    if(p==y) return true
+    else return false
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc2">
+            이번 문제는 노가다 였습니다. 하지만 이번엔 이전 문제에서 사용한
+            <br />
+            스프레드 연산자를 다시 사용해보는 시간이였습니다. 스프레드 연산자를
+            <br />
+            사용하여 배열로 바꾸고 for문을 사용하여 배열 x의 길이만큼 <br />
+            반복합니다. 이때 조건문에서 "p", "P"와 같으면 변수 p의 카운트를 1씩
+            <br />
+            증가시키고 "y", "Y"이면 변수 y의 카운트를 1씩 증가시킵니다. 그러고
+            <br />
+            변수 p와 y의 값이 같으면 true를 반환하고 틀리면 false를 반환하도록
+            <br />
+            하였습니다. 좀 노가다였지만 그래도 풀었네요 이제 이정도는 풉니다 ㅎ
+            <br />
+            웹디자인 기능사 망했습니다... 난 안되겠다,,
+          </p>
+        </div>
+        <hr />
+        <h3 class="t_tit">다른사람 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function numPY(s) {
+    return s.match(/p/ig).length == s.match(/y/ig).length;
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc3">
+            놀랍네요 진짜 전부다 알고 있는 것들입니다. 응용은 역시 너무 <br />
+            어렵네요.. match라는 간단한 메소드와 정규식표현의 콜라보입니다..
+            <br />
+            간단하게 끝낸 식을 보고 풀이한 사람 뇌를 빼서 구경해보고 싶습니다
+            ㅎㅎ <br />
+            구경하고 싶은 사람이 참 많아요 조만간 한번 시도해 보겠습니다. <br />
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
