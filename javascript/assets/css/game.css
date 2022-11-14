@@ -17,6 +17,10 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-image: url(/javascript/assets/img/gameEffectbg2.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 

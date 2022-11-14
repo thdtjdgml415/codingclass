@@ -301,6 +301,9 @@ function checkMatch() {
       scores++;
       let tetris = scores * 100;
       tetrisScore.innerHTML = `당신의 점수는${tetris}점`;
+
+      duration = duration - 50;
+      console.log(duration);
     }
   });
   generateNewBlock();
@@ -392,6 +395,7 @@ startTetris();
 function tetrisOver() {
   tetrisRestart.classList.add("show");
   tetrisMusic.pause();
+  duration = 0;
 }
 
 //restart btn
@@ -405,6 +409,7 @@ function restart() {
   playground.innerHTML = "";
   tetrisRestart.classList.remove("show");
   scores = 0;
+  duration = 500;
   init();
 }
 

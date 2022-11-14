@@ -1,10 +1,12 @@
 .tetris__wrap {
-    position: relative;
+    position: absolute;
     display: none;
+    left: 50%;
+    top: 30%
 }
 
 .tetris__wrap.show {
-    display: block;
+    display: inline-block;
 }
 
 .tetris__title {
