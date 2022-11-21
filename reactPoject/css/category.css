@@ -1,0 +1,24 @@
+#category {
+    padding-left: 50px;
+    margin-bottom: 34px;
+}
+
+#category h2 {
+    margin-bottom: 21px;
+    color: #fff;
+}
+
+.category__menu {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.category__menu li a {
+    padding: 30px 200px 30px 10px;
+    display: inline-block;
+    background: rgba(84, 84, 84, 0.2);
+    color: #fff;
+    margin-right: 30px;
+    margin-bottom: 16px;
+}

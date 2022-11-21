@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] x만큼 간격이 있는 n개의 숫자</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">x만큼 간격이 있는 n개의 숫자</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          함수 solution은 정수 x와 자연수 n을 입력 받아, x부터 시작해 x씩 <br />
+          증가하는 숫자를 n개 지니는 리스트를 리턴해야 합니다. 다음 제한 조건을
+          <br />
+          보고, 조건을 만족하는 함수, solution을 완성해주세요. <br />
+        </p>
+        <hr />
+        <h4>제한 사항</h4>
+        <p class="t_box">
+          x는 -10000000 이상, 10000000 이하인 정수입니다. <br />
+          n은 1000 이하인 자연수입니다. <br />
+        </p>
+        <h4>입출력 예</h4>
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>n</th>
+              <th>answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">2</td>
+              <td class="ce">5</td>
+              <td class="ce">[2,4,6,8,10]</td>
+            </tr>
+            <tr>
+              <td class="ce">4</td>
+              <td class="ce">3</td>
+              <td class="ce">[4,8,12]</td>
+            </tr>
+            <tr>
+              <td class="ce">-4</td>
+              <td class="ce">2</td>
+              <td class="ce">[-4, -8]</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+        <h3 class="t_tit">정답 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(x, n) {
+    return Array.from(Array(n), (n, index) => x * (index + 1));
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc2">
+            Array(n)은 길이가 n인 유사 배열을 만들고 기존의 배열 값에서 n과
+            <br />
+            index값을 매개변수로 받고 만들 배열의 조건을 사용하여 원하는 배열을
+            <br />
+            반환시켰습니다. <br />
+          </p>
+        </div>
+        <hr />
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

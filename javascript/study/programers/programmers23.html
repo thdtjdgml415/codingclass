@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] 정수 제곱근 판별</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">정수 제곱근 판별</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          임의의 양의 정수 n에 대해, n이 어떤 양의 정수 x의 제곱인지 아닌지
+          <br />
+          판단하려 합니다. n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고,
+          <br />
+          n이 양의 정수 x의 제곱이 아니라면 -1을 리턴하는 함수를 완성하세요.
+          <br />
+        </p>
+        <hr />
+        <h4>제한 사항</h4>
+        <p class="t_box">n은 1이상, 50000000000000 이하인 양의 정수입니다.</p>
+        <h4>입출력 예</h4>
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>n</th>
+              <th>return</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">121</td>
+              <td class="ce">144</td>
+            </tr>
+            <tr>
+              <td class="ce">3</td>
+              <td class="ce">-1</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+        <h3 class="t_tit">정답 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(n) {
+    let num = Math.sqrt(n);
+    return n%num == 0 ? (num+1) * (num +1) : -1
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc2">
+            Math.sqrt는 제곱근을 판별해 주는 메소드로 사용하여 매개변수 n의
+            <br />
+            제곱근을 판별해줍니다. num에 제곱근을 저장하고 삼항연산자를 사용하여
+            <br />
+            제곱근인 수로 매개변수 n을 나눴을때 나머지가 0이면 제곱근 수에
+            <br />
+            +1을하여 제곱하는 공식을 만들어서 적용하였습니다. 그게 아니라면 -1을
+            <br />
+            반환시켰습니다. <br />
+          </p>
+        </div>
+        <hr />
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

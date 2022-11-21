@@ -1,0 +1,15 @@
+.wrap {
+    width: 100%;
+    display: flex;
+    background-image: linear-gradient(#570059 0%, #212121 51%);
+}
+
+.left {
+    width: 80%;
+
+}
+
+#aside {
+    width: 30%;
+    height: 1000px;
+}
