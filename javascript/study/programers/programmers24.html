@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] 약수의 개수와 덧셈</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">약수의 개수와 덧셈</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          두 정수 left와 right가 매개변수로 주어집니다. left부터 right까지의
+          <br />
+          모든 수들 중에서, 약수의 개수가 짝수인 수는 더하고, 약수의 개수가
+          <br />
+          홀수인 수는 뺀 수를 return 하도록 solution 함수를 완성해주세요. <br />
+        </p>
+        <hr />
+        <h4>제한 사항</h4>
+        <p class="t_box">1 ≤ left ≤ right ≤ 1,000</p>
+        <h4>입출력 예</h4>
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>left</th>
+              <th>right</th>
+              <th>result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">13</td>
+              <td class="ce">17</td>
+              <td class="ce">43</td>
+            </tr>
+            <tr>
+              <td class="ce">24</td>
+              <td class="ce">27</td>
+              <td class="ce">52</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+        <h3 class="t_tit">정답 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(left, right) {
+    let b = 0;
+    for(let i = left; i &lt;= right; i++) {
+        let a = 0
+        for(let j = 1; j&lt;=i; j++) {
+            if(i%j===0) {
+                a += 1
+            }
+        }
+        b = a%2==0 ? b += i : b -= i
+    }
+    return b
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc2">
+            간단하게 반복문을 사용하여 풀이한 공식입니다. 이중 반복문을 사용하여
+            <br />
+            매개변수로 받은 left부터 right까지 범위를 정하고 약수는 나누어
+            <br />
+            떨어지는 수 이기 때문에 조건문을 사용하여 나누었을때 나머지가 0인
+            <br />
+            수를 발견하면 변수 a를 1씩 증가시켜 약수의 개수를 구하고 <br />
+            삼항연산자를 사용하여 약수의 개수가 짝수라면 b에 그 수를 더해주고
+            <br />
+            홀수라면 뺴주어 구하였습니다. <br />
+          </p>
+        </div>
+        <hr />
+        <h3 class="t_tit">다른사람 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(left, right) {
+    var answer = 0;
+    for (let i = left; i &lt;= right; i++) {
+        if (Number.isInteger(Math.sqrt(i))) {
+            answer -= i;
+        } else {
+            answer += i;
+        }
+    }
+    return answer;
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc3">
+            이 풀이는 수학적으로 알고 있어야하는 사실이 있어야 이해할 수 있다.
+            <br />
+            "제곱근이 정수면 약수의 개수가 홀수다" 라는 사실을 알아야 이해할 수
+            있다 <br />
+            isInteger 메서드는 주어진 값이 정수인지 판별합니다 <br />
+            <br />
+            이과 망해라(저도 이과임)
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

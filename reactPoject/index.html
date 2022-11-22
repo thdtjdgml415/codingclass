@@ -6,6 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movie site</title>
     <link rel="stylesheet" href="/reactPoject/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      .actor__slider {
+        width: 100%;
+        height: 200px;
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 30px;
+      }
+      .actor__slider .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .actor__slider .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .actor__slider .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* /다른 출연진 슬라이더 */
+
+      .another__summery {
+        position: relative;
+        height: 200px;
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+      }
+
+      .another__summery .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .another__summery .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .another__summery .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* /관련영상 슬라이더 */
+      /* 추천영화 슬라이더 */
+      .movie__recommend {
+        color: #fff;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      .recommend__inner {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .recommend__inner .swiper {
+        width: 100%;
+        height: 150px;
+      }
+
+      .recommend__inner .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .recommend__inner .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* /추천영화 슬라이더 */
+    </style>
   </head>
   <body>
     <div class="wrap">
@@ -17,6 +157,7 @@
             type="text"
             placeholder="영화를 검색해주세요!"
           />
+          <img src="/reactPoject/img/Search.png" alt="" />
         </div>
         <section id="category">
           <h2>Category</h2>
@@ -97,13 +238,192 @@
               <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
               <em class="movie__year">2021/12/15</em>
             </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
+            <div class="movie__card">
+              <div class="image__inner">
+                <img src="../reactPoject/img/스파이더맨.jpg" alt="블랙팬서" />
+              </div>
+              <p class="movie__title">스파이더맨 : 노 웨이 홈</p>
+              <em class="movie__year">2021/12/15</em>
+            </div>
           </div>
         </section>
       </div>
       <!-- 왼쪽 메뉴들 -->
-      <section id="aside"></section>
+      <section id="aside">
+        <div class="aside__header">
+          <div class="aside__header__inner">
+            <div class="icon__1">
+              <img src="../reactPoject/img/Minimizarwindow.jpg" alt="" />
+            </div>
+            <div class="icon__2">
+              <img src="../reactPoject/img/bigwindow.jpg" alt="" />
+            </div>
+            <div class="icon__3">
+              <img src="../reactPoject/img/close.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <article id="movie">
+          <img src="../reactPoject/img/movieimage.jpg" alt="" />
+          <div class="aside__top">
+            <div class="aside__desc">
+              <h2>AVATAR - THE WAY OF WATER</h2>
+              <span class="director">Director <em>James Cameron</em></span>
+            </div>
+            <div class="aside__award">평점</div>
+          </div>
+          <div class="movie__summery">개요</div>
+          <div class="movie__summery__inner">
+            2009년 개봉한 영화 아바타의 두번째 시리즈로 첫번째 작품의 사건이
+            발생한 이후의 이야기를 다룬다.
+          </div>
+          <div class="movie__actor">주요 출연진</div>
+          <div class="actor__slider">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+              </div>
+            </div>
+          </div>
+          <div class="movie__another">관련영상</div>
+          <div class="another__summery">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+              </div>
+            </div>
+          </div>
+          <div class="movie__recommend">추천 영화</div>
+          <div class="recommend__inner">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
       <!-- 오른쪽 창 -->
     </div>
     <!-- 전체 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        pagination: {
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 15,
+          },
+        },
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".another__summery .mySwiper", {
+        slidesPerView: 3,
+        freeMode: true,
+        pagination: {
+          clickable: true,
+        },
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".recommend__inner .mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>

@@ -5,11 +5,11 @@
 }
 
 .left {
-    width: 80%;
+    width: 72%;
 
 }
 
 #aside {
-    width: 30%;
-    height: 1000px;
+    width: 28%;
+    background: #ccc;
 }
