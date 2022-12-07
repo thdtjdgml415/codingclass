@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] 부족한 금액 계산하기</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">부족한 금액 계산하기</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          새로 생긴 놀이기구는 인기가 매우 많아 줄이 끊이질 않습니다. 이 <br />
+          놀이기구의 원래 이용료는 price원 인데, 놀이기구를 N 번 째 이용한다면
+          <br />
+          원래 이용료의 N배를 받기로 하였습니다. 즉, 처음 이용료가 100이었다면
+          <br />
+          2번째에는 200, 3번째에는 300으로 요금이 인상됩니다. 놀이기구를 count번
+          <br />
+          타게 되면 현재 자신이 가지고 있는 금액에서 얼마가 모자라는지를 return
+          <br />
+          하도록 solution 함수를 완성하세요. 단, 금액이 부족하지 않으면 0을
+          <br />
+          return 하세요. <br />
+        </p>
+        <hr />
+        <h4>제한 사항</h4>
+        <p class="t_box">
+          놀이기구의 이용료 price : 1 ≤ price ≤ 2,500, price는 자연수 <br />
+          처음 가지고 있던 금액 money : 1 ≤ money ≤ 1,000,000,000, money는
+          자연수 <br />
+          놀이기구의 이용 횟수 count : 1 ≤ count ≤ 2,500, count는 자연수 <br />
+        </p>
+        <h4>입출력 예</h4>
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>price</th>
+              <th>money</th>
+              <th>count</th>
+              <th>result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">3</td>
+              <td class="ce">20</td>
+              <td class="ce">4</td>
+              <td class="ce">10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+        <h3 class="t_tit">정답 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(price, money, count) {
+    let totalPrice = 0;
+    
+    for(let i=1;i&lt;=count;i++){
+        totalPrice += price * i;
+    }
+    
+    return money > totalPrice ? 0 : totalPrice-money
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc2">
+            이번 문제는 해석이 어려운 문제였습니다. 쉽지 않네요.. 놀이기구
+            이용료는 price입니다. <br />
+            count번 놀이기구를 타고 money는 처음 가지고 있던 금액입니다. <br />
+            놀이기구를 count번 탔을 때 가격을 변수에 담기위해 totalPrice를
+            <br />
+            선언하고 반복문을 사용하여 count번 놀이기구를 이용할 때까지 <br />
+            반복시켜주도록 합니다. 계속 중첩해서 가격을 지불해야하기 때문에 +=을
+            <br />
+            사용합니다. 그리고 삼항연산자를 사용하여 놀이기구를 count번 탔을때
+            <br />
+            내가 지불해야 하는 돈 totalPrice가 처음 가지고 있던 돈 money보다
+            <br />
+            적다면 0을 반환하고 많다면 내가 지불해야하는 돈 totalPrice가 내가
+            <br />
+            처음에 가지고 있던 돈 money보다 많다면 totalPrice-money를 하여
+            <br />
+            부족한 돈을 반환합니다. <br />
+            전 아직 부족하여 풀지 못해 다른사람 풀이를 가져와 보았습니다.
+            <br />\ 이렇게라도 조금씩 풀어보겠습니다. 화이팅! <br />\
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

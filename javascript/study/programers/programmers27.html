@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[프로그래머스] 행렬의 덧셈</title>
+    <link rel="stylesheet" href="/javascript/assets/css/style.css" />
+    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1><a href="../index.html">Javascript</a></h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="../javascript01.html">데이터 저장하기</a></li>
+          <li><a href="../javascript02.html">데이터 불러오기</a></li>
+          <li><a href="../javascript03.html">데이터 실행하기</a></li>
+          <li><a href="../javascript04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+          <li><a href="../javascript05.html">문자열 객체</a></li>
+          <li><a href="../javascript06.html">배열 객체</a></li>
+          <li><a href="../javascript07.html">수학 객체</a></li>
+          <li><a href="../javascript08.html">숫자 객체</a></li>
+          <li><a href="../javascript09.html">브라우저 객체</a></li>
+          <li><a href="../javascript10.html">요소 객체</a></li>
+          <li><a href="../javascript11.html">이벤트 객체</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <div class="document">
+        <h3 class="t_tit">행렬의 덧셈</h3>
+        <h4 class="t_tit2">설명</h4>
+        <p class="t_desc2">
+          행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을
+          서로 더한 결과가 됩니다. <br />
+          2개의 행렬 arr1과 arr2를 입력받아, 행렬 덧셈의 결과를 반환하는 함수,
+          solution을 완성해주세요. <br />
+        </p>
+        <hr />
+        <h4>제한 사항</h4>
+        <p class="t_box">
+          행렬 arr1, arr2의 행과 열의 길이는 500을 넘지 않습니다. <br />
+        </p>
+        <h4>입출력 예</h4>
+        <table class="t_table">
+          <thead>
+            <tr>
+              <th>arr1</th>
+              <th>arr2</th>
+              <th>return</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ce">[[1,2],[2,3]]</td>
+              <td class="ce">[[3,4],[5,6]]</td>
+              <td class="ce">[[4,6],[7,9]]</td>
+            </tr>
+            <tr>
+              <td class="ce">[[1],[2]]</td>
+              <td class="ce">[[3],[4]]</td>
+              <td class="ce">[[4],[6]]</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+        <h3 class="t_tit">정답 풀이</h3>
+        <div class="t_code">
+          <pre><code class="language-js">function solution(arr1, arr2) {
+    let procession = [];
+    procession = arr1.map((e, i) => (
+        e.map((el, k)=>(
+            el + arr2[i][k]
+        ))
+    ))
+    return procession;
+}
+</code></pre>
+          <h3 class="t_tit">해설</h3>
+          <p class="t_desc2">
+            이번 문제는 이중배열에 이중 반복문 까지 사용하였습니다. map을 <br />
+            사용하여 작업하였는데 저는 또 못해서 다른 사람 풀이를 <br />
+            참고하였습니다. 행렬의 덧셈은 같은 배열에 위치들 끼리 더해주는
+            <br />
+            방식입니다. 우선 이중배열 arr1을 map을 사용하여 배열로 바꾸고 다시
+            <br />
+            map을 사용하여 요소들을 뽑아냅니다. 뽑아 냈으면 arr1의 요소의 위치는
+            <br />
+            map을 사용하였을때 인덱스 값이 위치입니다. 그렇기 때문에 arr2에서
+            <br />
+            i와 k를 써서 이중배열의 안쪽 요소의 위치를 찾고 더해주면 됩니다.
+            <br />
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="/javascript/assets/js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
